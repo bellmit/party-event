@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+/*------------------------全局变量-------------------------------------*/
+body,h1,h2,h3,h4,h5,h6,dd,dl,dt,form,th,td,ul,li,ol,p{ margin:0;padding:0;}
+body{font-size:12px;font-family:"宋体",HELVETICA; color:#BEBCBD;line-height:22px;}
+input,select{font-size:12px;line-height:16px;}
+img{ border:0;}
+ul,li,ol{list-style-type:none; color:#666666;}
+table{border-collapse:collapse;border-spacing:0;}
+.tc{text-align:center;}
+.tl{text-align:left;}
+.tr{text-align:right;} 
+.dis{display:block;}
+.undis{display:none;}
+.fl{float:left;}
+.fr{float:right;}
+.cl{clear:both;}
+.fb{font-weight:bold;}
+.fnb{font-weight:200;margin-left:-1px;} 
+tr{color:#666666;}
+a{color:#666666;text-decoration:none; font-weight:normal;}
+a:hover {color:#bd0a01;text-decoration:underline;} 
+h2,h3,h4,h5{font-size:14px; color:#333;}
+h6{font-size:12px; color:#333; font-weight:normal;} 
+span{font-size:12px; color:#666666; font-weight:normal;}
+em,i{font-style:normal;} 
+p{font-size:12px; color:#333;}
+.clearfix:after {clear:both; content:'';display: block;font-size: 0;line-height: 0;visibility: hidden; width: 0;height: 0;}
+.clearfix {+display: inline-block;}
+* html .clearfix {height: 1%;} 
+
+/*以上部分为css格式化定义*/
+html{
+	height:100%;
+}
+body{
+	margin:0;
+}
+
+.problem_cbody{
+	min-width:320px;
+}
+
+/*problem_top begin*/
+.problem_top{
+	min-height:92px;
+	border-bottom:1px solid #D4D4D4;
+	background:#EEF2F3;
+}
+.problem_top_pic{
+	position:relative;
+	width:80px;
+	height:80px;
+	float:left;
+	margin-left:15px;
+}
+.pic_show{
+	margin-top:5px;
+	display:inline-block;
+	width:80px;
+	height:80px;
+	/*background:url(../images/keshan/123.jpg) left top no-repeat;*/
+}
+.pic_show img{
+    width:80px;
+    height:80px;
+}
+.problem_top_pic i{
+	position:absolute;
+	top:50px;
+	left:0;
+	display:inline-block;
+	width:80px;
+	height:35px;
+	line-height:35px;
+	font-size:18px;
+	color:#fff;
+	background:#000;
+	opacity:0.5;
+	text-align:center;
+}
+.pic_intrgoduce{
+	margin-left:15px;
+	margin-right:15px;
+	float:left;
+	max-width:400px;
+	margin-bottom:5px;
+}
+
+/*pic_intrgoduce*/
+.pic_intrgoduce h3{
+	font-size:18px;
+	margin:8px 0 0;
+	font-weight:bold;
+	color:#2A2A2C;
+}
+.pic_intrgoduce .info_introduce{
+	float:left;
+	max-width:200px;
+	margin:0;
+}
+.info_introduce span{
+	float:left;
+	font-size:12px;
+	color:#7A7A7C;
+}
+.info_introduce .info_one{
+	font-size:12px;
+	display:inline-block;
+	width:200px;
+}
+.info_introduce span code{
+	width:60px;
+	text-align:right;
+	float:left;
+}
+.info_introduce span tt{
+	float:left;
+	overflow:hidden;
+	min-height:20px;
+}
+.info_introduce .info_from tt{
+	max-width:130px;
+}
+.info_introduce .info_accepted tt{
+	max-width:130px;
+	/*white-space:nowrap;
+	text-flow:ellipsis;*/
+}
+.info_introduce .info_time , .info_introduce .info_settime{
+	width:200px;
+} 
+/*bg_triangle*/
+.bg_triangle{
+	position:relative;
+	margin:0;
+	width:100%;
+	height:12px;
+}
+.bg_triangle i{
+	position:absolute;
+	top:-2px;
+	right:40px;
+	display:inline-block;
+	height:12px;
+	width:22px;
+	background:url(../images/ico_xiaojiaoxing_big.png) left top no-repeat;
+}
+
+
+
+/*----------------------------problem_content----------------------------*/
+.problem_content{
+	padding-bottom:10px;
+	min-width:320px;
+	background:url(../images/content_bg.png) 64px -100px repeat-y;
+}
+
+/*-----content_list-----*/
+.content_list h5{
+	margin-left:20px;
+	height:22px;
+	line-height:22px;
+	font-size:16px;
+	font-weight:bold;
+	color:#595959;
+	background:#fff;
+}
+
+/*--content_line--*/
+.content_line{
+	/*position:relative;*/
+}
+.content_line_content{
+	position:relative;
+	background:#E2E2E2;
+	float:left;
+	padding:10px;
+	/*position:absolute;
+	left:70px;
+	top:0;
+	right:5px;
+	bottom:0;*/
+}
+.content_line_content i{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	width:7px;
+	background:url(../images/ico_xiaojiaoxing_small.png) left 10px no-repeat #fff;
+}
+.content_line_content p{
+	margin-left:7px;
+	font-size: 14px;
+}
+.content_line .content_line_span{
+	margin-top:5px;
+	float:left;
+	display:inline-block;
+	margin-left:15px;
+	width:65px;
+	height:16px;
+	line-height:16px;
+	font-size:14px;
+	background:url(../images/ico_xiaoyuan.png) 43px top no-repeat;
+}
+.content_line .problem_submit{
+	height:23px;
+	line-height:23px;
+	background:url(../images/ico_dayuan.png) 40px top no-repeat;
+}
+
+.content_line{
+	margin-top:10px;
+}
+.content_line_content{
+	width:366px;
+}
+.content_line_content p{
+	color:#5B5B5B;
+}
+.content_line_content .content_line_content_title , 
+.content_line_content .content_line_content_title code ,
+.content_line_content .content_line_content_title strong ,
+.content_line_content strong , .content_line_content code{
+	color:#000;
+}
+.problem_content .problem_result .content_line_content{
+	background:#E45050;
+}
+.problem_content .problem_result .content_line_content p ,
+.problem_content .problem_result .content_line_content p code{
+	color:#fff;
+}
+.problem_content .problem_result .content_line_content i{
+	background:url(../images/ico_xiaojiaoxing_redsmall.png) left 8px no-repeat #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+

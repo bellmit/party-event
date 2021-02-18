@@ -1,0 +1,142 @@
+.table_nav {
+    text-align: right;
+    /*height: 55px;*/
+    /*line-height: 50px;*/
+    padding-right: 30px;
+    font-size: 12px;
+    line-height: normal;
+}
+.pagebottonlist{
+    /*margin: 20px 0;*/
+    padding: 20px 0;
+    margin-bottom: 0;
+    line-height: normal;
+}
+.table_nav li {
+    display: inline-block;
+    color: #656666;
+    line-height: normal;
+}
+.first{
+    margin-left: 5px;
+}
+.table_nav li input {
+    width: 45px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    padding: 0 5px;
+    text-align:center;
+    height: 20px;
+}
+/*999/999*/
+.table_nav li input.goTopage_01{
+    width:55px;
+}
+/*9999/9999*/
+.table_nav li input.goTopage_02{
+    width:80px;
+}
+.table_nav li em {
+    margin: 0 10px;
+}
+.table_nav li.first a {
+    margin-left: 10px;
+    background: url("images/btn_left.png") no-repeat 0 0;
+    font-size: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -6px;
+    margin-right: 5px;
+}
+.table_nav li.first a.btnNo{
+    background: url("images/btn_left_no.png") no-repeat 0 0;
+}
+.table_nav li.first a:hover {
+    background: url("images/btn_left_hover.png") no-repeat 0 0;
+    font-size: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -6px;
+    margin-right: 5px;
+}
+.table_nav li.first a.btnNo:hover{
+    background: url("images/btn_left_no.png") no-repeat 0 0;
+}
+.table_nav li.pre_page a {
+    background: url("images/btn_left1.png") no-repeat 0 0;
+    font-size: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -6px;
+    margin-right: 5px;
+}
+.table_nav li.pre_page a.btnNo{
+    background: url("images/btn_left1_no.png") no-repeat 0 0;
+}
+.table_nav li.pre_page a:hover {
+    background: url("images/btn_left1_hover.png") no-repeat 0 0;
+    font-size: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -6px;
+    margin-right: 5px;
+}
+.table_nav li.pre_page a.btnNo:hover{
+    background: url("images/btn_left1_no.png") no-repeat 0 0;
+}
+.table_nav li.next_page a {
+    background: url("images/btn_right1.png") no-repeat 0 0;
+    font-size: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -6px;
+    margin-right: 5px;
+}
+.table_nav li.next_page a.btnNo{
+    background: url("images/btn_right1_no.png") no-repeat 0 0;
+}
+.table_nav li.next_page a:hover {
+    background: url("images/btn_right1_hover.png") no-repeat 0 0;
+    font-size: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -6px;
+    margin-right: 5px;
+}
+.table_nav li.next_page a.btnNo:hover{
+    background: url("images/btn_right1_no.png") no-repeat 0 0;
+}
+.table_nav li.last_page a {
+    background: url("images/btn_right.png") no-repeat 0 0;
+    font-size: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -6px;
+    margin-right: 5px;
+}
+.table_nav li.last_page a.btnNo{
+    background: url("images/btn_right_no.png") no-repeat 0 0;
+}
+.table_nav li.last_page a:hover {
+    background: url("images/btn_right_hover.png") no-repeat 0 0;
+    font-size: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -6px;
+    margin-right: 5px;
+}
+.table_nav li.last_page a.btnNo:hover{
+    background: url("images/btn_right_no.png") no-repeat 0 0;
+}
+.table_nav li .tableBarSpan{
+    margin-right: 25px;
+    font-size: 12px;
+}

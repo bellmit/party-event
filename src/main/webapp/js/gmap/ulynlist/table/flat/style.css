@@ -1,0 +1,58 @@
+@charset "utf-8";
+/*------------------------全局变量-------------------------------------*/
+/*body,th,td{ margin:0;padding:0;}*/
+/*table{border-collapse:collapse;border-spacing:0;}*/
+
+/*-------------------------------------------*/
+.ulynlist_flat_table{
+    border-collapse:collapse;
+    border-spacing:0;
+    font-family:"宋体";
+    font-size:12px;
+    width:100%;
+    text-align:center;
+}
+
+/*=============当存在排序的情况时==============*/
+
+/*当存在排序的情况是后，给th添加一个sortable的样式*/
+.ulynlist_flat_table th.sortable{
+    cursor:pointer;
+}
+
+
+.ulynlist_flat_table th.asc span{
+    padding:0 10px;
+    background:url(images/sortAsc.gif) right 8px no-repeat;
+}
+.ulynlist_flat_table th.desc span{
+    padding:0 10px;
+    background:url(images/sortDesc.gif) right 8px no-repeat;
+}
+
+/*=============当存在排序的情况时==============*/
+
+.ulynlist_flat_table .table_th th{
+    color:#595959;
+    height:40px;
+    line-height:40px;
+    background:url(images/bg_th_line.jpg) right center no-repeat;
+}
+.ulynlist_flat_table .table_th th.bg_while_last{
+    background:none;
+}
+.ulynlist_flat_table td.td_common{
+    color:#575A5B;
+    height:40px;
+    line-height:40px;
+    border-bottom:1px solid #fff;
+}
+.ulynlist_flat_table td.td_check{
+    background:#E2E7E9;
+}
+.ulynlist_flat_table td.td_color_light{
+    background:#EDF1F2;
+}
+.ulynlist_flat_table td.td_color_dark{
+    background:#E3E9E9;
+}

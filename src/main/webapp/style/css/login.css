@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*logo放置*/
+.logo_big{
+	height:120px;
+	background:url(../images/logo_middle.png) center no-repeat;
+}
+
+
+.login_h1_title{
+	margin:0;
+	height:50px;
+	line-height:50px;
+	font-size:20px;
+	color:#fff;
+	font-family:"黑体";
+	text-align:center;
+}
+
+
+/*login_input_info*/
+.login_info{
+	position:relative;
+	margin:12px auto;
+	/*width:282px;*/
+	width:90%;
+	height:45px;
+	background:#67AFC5;
+	border-radius:5px;
+}
+.login_info label{
+	display:inline-block;
+	width:10%;
+	min-width:56px;
+	height:45px;
+	/*float:left;*/
+}
+.input_div{
+	position:absolute;
+	left:10%;
+	right:5px;
+	top:3px;
+	bottom:3px;
+	background:#fff;
+	border-radius:3px;
+}
+.login_info input{
+	float:left;
+	width:96%;
+	min-width:218px;
+	height:33px;
+	border-radius:3px;
+	/*margin-top:3px;*/
+	font-size:16px;
+	border:none;
+	text-indent:5px;
+}
+.login_info input[type='text'],.login_info input[type='password']{
+    width: 99%;
+    background:transparent;
+    height: 30px ;
+}
+.use_name_info label{
+	background:url(../images/use_name_bg.png) center 4px no-repeat;
+}
+.pass_word_info label{
+	background:url(../images/pass_word_bg.png) center 3px no-repeat;
+}
+.pass_word_info{
+	margin-top:22px;
+}
+
+.lost_password{
+    font-size:18px;
+    color:#1E7D9A;
+    position: absolute;
+    top: 48px;
+    right: 5px;
+}
+
+/*sub_btn*/
+.sub_btn{
+	margin-top:50px;
+	/*padding-bottom:50px;*/
+	text-align:center;
+}
+.sub_btn .login_btn{
+	height:42px;
+	width:177px;
+	border:none;
+	line-height:42px;
+	background:url(../images/btn_login.png) left top no-repeat;
+	color:#fff;
+	font-size:20px;
+	font-family:"宋体";
+}

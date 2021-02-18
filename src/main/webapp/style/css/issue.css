@@ -1,0 +1,11 @@
+.button_issue{
+	width: 40%;
+	background: #0091e2;
+	border: 0;
+	color: #fff;
+	padding: 7px 0;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+}

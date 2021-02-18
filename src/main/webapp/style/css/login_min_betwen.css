@@ -1,0 +1,18 @@
+@charset "utf-8";
+.registration_info input{
+	/*width:200px;*/
+}
+
+.pic_intrgoduce{
+	width:195px;
+}
+.pic_intrgoduce h3{
+	font-size:13px;
+}
+
+.content_line_content{
+	width:205px;
+}
+.input_divex{
+    left:56px;
+}

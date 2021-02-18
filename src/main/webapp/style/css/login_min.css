@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.login_info label{
+	width:56px;
+	/*height:45px;
+	float:left;*/
+}
+.login_info input{
+	/*float:left;
+	width:77%;
+	min-width:218px;
+	height:34px;
+	margin-top:2px;
+	font-size:16px;*/
+}
+.input_divex{
+	left:56px; 
+}
+
+.registration_input_info{
+	/*width:95%;*/
+}
+.registration_info input{
+	/*width:180px;*/
+}

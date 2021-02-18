@@ -1,0 +1,120 @@
+.default-pagebar .pagelistdiv {
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    /*background: url(../images/class_bg.jpg) repeat-x;*/
+    background-position: 0px -72px;
+    /*float: left;*/
+    width: 100%;
+    overflow: hidden;
+}
+.default-pagebar .pageinfotext {
+    float: left;
+    text-align: left;
+    padding: 0px 5px 0px 5px;
+    color: #333;
+}
+.default-pagebar .pagebottonlist {
+    float: right;
+    padding: 0px 5px 0px 5px;
+
+    position: relative;
+}
+/* Pager */
+.default-pagebar .pagebottonlist
+{
+
+}
+
+.default-pagebar .pagebottonlist .disabled
+{
+    border: 1px solid #ddd;
+    color: #999;
+    margin-top: 4px;
+    padding: 3px;
+    text-align: center;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    *float:left;
+}
+
+.default-pagebar .pagebottonlist .current
+{
+    background-color: #6ea9bf;
+    border: 1px solid #ddd;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 4px;
+    padding: 3px 5px;
+    text-align: center;
+    *float:left;
+    *height: 20px;
+    *line-height: 20px;
+}
+
+.default-pagebar .pagebottonlist span, .default-pagebar .pagebottonlist a
+{
+    margin: 4px 3px;
+}
+
+.default-pagebar .pagebottonlist a
+{
+    border: 1px solid #aaa;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    *float:left;
+    *height: 20px;
+    *line-height: 20px;
+}
+.default-pagebar .pagebottonlist .position_page {
+    margin-right: 90px;
+}
+.default-pagebar .pagebottonlist .goto
+{
+    padding: 3px 5px;
+    width: 40px;
+    /*margin-bottom: 0px;*/
+    border-radius: 0px;
+    height: 19px;
+    margin-bottom:4px;
+    border: 1px solid #DDDDDD;
+    /*margin-right: 25px;*/
+    position: absolute;
+    bottom:0px ;
+    *bottom:-4px ;
+    right: 30px;
+}
+.default-pagebar .pagebottonlist .go_button
+{
+    border: 1px solid #ddd;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: #999;
+    height: 27px;
+    background: #F3F3F3;
+    position: absolute;
+    right: 6px;
+    bottom: 4px;
+    *bottom:0px ;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+    .default-pagebar .pagebottonlist .goto
+    {
+        height: 16px;
+        bottom: 2px;
+    }
+    .default-pagebar .pagebottonlist .go_button
+    {
+        height: 24px;
+        bottom: 6px;
+    }
+}

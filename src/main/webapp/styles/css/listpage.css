@@ -1,0 +1,202 @@
+@charset "utf-8";
+/**
+ * 版权所有：厦门畅享信息技术有限公司
+ * Copyright 2014 Xiamen Sunsharing Information CO., LTD.
+ * All right reserved. 
+ *====================================================
+ * 文件名称: listpage.css
+ * 修订记录：
+ * No    日期				作者(操作:具体内容)
+ * 1.   15-1-22			linyh(创建:创建文件)
+ *====================================================
+ * 文件描述：(说明本文件需要实现的内容)
+ * 
+ */
+.listPageTop{
+    padding: 15px 0;
+    height: 60px;
+    width: 95%;
+    margin: 0 auto;
+    min-width: 700px;
+}
+.listPageTop .studentInfo{
+    width: 250px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+    text-indent: 8px;
+    color: #666;
+    /*color: #9A9A9A;*/
+}
+.btn_search{
+    border: 1px solid #7EAB2C;
+    background: url("../../images/ico_ckjfmx.png") #81AE2D 5px center no-repeat;
+}
+.btn_refresh{
+    border: 1px solid #3D84C7;
+    background: url("../../images/ico_gxjf.png") #4A96DF 5px center no-repeat;
+}
+.btn_reg{
+    border: 1px solid #CB7B0C;
+    background: url("../../images/ico_dj.png") #DA8914 5px center no-repeat;
+}
+.ico_jysj{
+    background: url("../../images/ico_jysj.png") #00B3E9 5px center no-repeat;
+}
+
+
+.listPageRegInfo{
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid #DEDEDE;
+}
+.listPageRegInfoPart{
+    padding: 7px;
+    line-height: 30px;
+    border-top: 1px dashed #DEDEDE;
+}
+.listPageRegInfoPart:first-child{
+    border-top: none;
+}
+.listPageRegInfoPart label{
+    width: 90px;
+    text-align: right;
+    float: left;
+    color: #565656;
+    font-size: 12px;
+    font-family: "宋体";
+    margin: 0;
+}
+.listPageRegInfoPart .PartContent{
+    /* margin-left: 80px; */
+}
+.listPageRegInfoPart .PartContent .hasSelect{
+    background: #DA8914;
+    color: #fff;
+}
+.stateSpan{
+    margin: 0 5px;
+    color: #1371AF;
+    cursor: pointer;
+    padding: 0 15px;
+    height: 30px;
+    float: left;
+    text-align: center;
+}
+.listPageRegInfoPart .PartContent select{
+    border: 1px solid #D5D5D5;
+    width: 120px;
+    height: 30px;
+    margin: 0 5px;
+    color: #666;
+}
+
+.listPageTable{
+    margin-top: 10px;
+    border-top: 1px solid #42779E;
+}
+
+/*数据复查-弹窗样式*/
+#fcshPop .modal-body table{
+    width: 100%;
+}
+#fcshPop caption {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #999;
+}
+#fcshPop .modal-body table caption {
+    text-align: right;
+    font-size: 12px;
+    font-family: "宋体";
+    color: #515151;
+}
+.colorGreen {
+    color: green;
+}
+#fcshPop .modal-body table tr{
+    /*border-bottom: 1px solid #999;*/
+}
+#fcshPop .modal-body table tr:first-child{
+    height: 45px;
+}
+#fcshPop .modal-body table tr td:first-child{
+    width: 90px;
+}
+#fcshPop .modal-body table tr td textarea{
+    width: 725px;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #999;
+    font-size: 14px;
+    border-radius: 2px;
+}
+#fcshPop .modal-body table tr td:first-child{
+    text-align: right;
+}
+#fcshPop .doSomething{
+    margin-top: 15px;
+}
+#fcshPop .doSomething label{
+    color: #666666;
+    width: 90px;
+    font-weight: normal;
+    text-align: right;
+}
+#fcshPop .doSomething span{
+    margin-right: 15px;
+}
+#fcshPop .doSomething input[type='radio']{
+    position: relative;
+    top: 2px;
+    margin-right: 8px;
+}
+#fcshPop .modal-footer {
+    margin-top: 0;
+}
+#fcshPop .modal-footer .btn{
+    padding-left: 10px;
+}
+#fcshPop .modal-footer .btn_save{
+    background-color: #5DB75F;
+}
+#fcshPop .modal-footer .btn_sendMess{
+    background-color: #4A97DB;
+}
+#fcshPop .modal-footer .btn_update{
+    background-color: #00AA8E;
+}
+#fcshPop .modal-footer .btn_cancel{
+    background-color: #D98813;
+}
+
+#fcshPop .doResult{
+    display: inline-block;
+    text-align: center;
+    width: 450px;
+    color: red;
+    padding-right: 25px;
+}
+
+/* 隐藏查询条件标签 -180410 */
+.show-con{
+	border-top: 1px dashed #DEDEDE;
+	position:relative;
+	margin-top:10px;
+}
+.show-con .hide-a{
+	position:absolute;
+	top:-13px;
+	right:0;
+	z-index:99;
+	background-color:#fff;
+	padding:0 5px;
+	color:#09d;
+}
+.show-con .hide-a:hover{
+	color:#DA8914;
+}
+.show-con .subItem1{
+	margin-top:0
+}

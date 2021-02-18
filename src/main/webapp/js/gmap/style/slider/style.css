@@ -1,0 +1,72 @@
+body {
+    font: 12px arial,'宋体',sans-serif;
+    background-color: #fff;
+    margin: 0;
+    color: #4c4c4c;
+    padding: 0;
+    /* min-width: 960px; */
+    height: 100%;
+    overflow: hidden;
+}
+#legend{background:#fff;padding:7px;z-index:100}
+.legend-text{float:left;line-height:21px}
+.legend-item{border:1px solid #21bb0c;background:#46b035;display:block;width:70px;height:18px;float:left;margin-left:1px;color:#fff;position:relative;overflow:hidden;text-decoration:none}
+.legend-1{border-color:#ADD2EB;background:#ADD2EB;}
+.legend-2{border-color:#00ffff;background:#00ffff;}
+.legend-3{border-color:#00ff00;background:#00ff00;}
+.legend-4{border-color:#ffff00;background:#ffff00;}
+.legend-5{border-color:#ff0000;background:#ff0000;}
+.legend-item-wrapper{position:absolute;height:45px;top:-46px;left:-84px}
+.legend-item-tip{position:relative;border:1px solid #acb2bb;color:#333;white-space:nowrap;background-repeat:no-repeat;background-position:14px 50%;padding:6px 14px 6px 99px;height:40px;width:230px;line-height:26px;text-align:center}
+.legend-1 .legend-item-tip{background:url(images/bg_level_1_334d47d.png) no-repeat 14px 50% #fff}
+.legend-2 .legend-item-wrapper{left:-94px}
+.legend-2 .legend-item-tip{background:url(images/bg_level_2_d9f377d.png) no-repeat 14px 50% #fff}
+.legend-3 .legend-item-wrapper{left:-94px}
+.legend-3 .legend-item-tip{background:url(images/bg_level_3_485941c.png) no-repeat 14px 50% #fff}
+.legend-4 .legend-item-wrapper{left:-94px}
+.legend-4 .legend-item-tip{background:url(images/bg_level_4_44190f0.png) no-repeat 14px 50% #fff}
+.legend-5 .legend-item-wrapper{left:-190px}
+.legend-5 .legend-item-tip{background:url(images/bg_level_5_f28380e.png) no-repeat 14px 50% #fff}
+.legend-item:hover{overflow:visible}
+.legend-item-tip-arrow{background:url(images/tip_arrow_c777bf8.png) no-repeat 0 0;width:7px;height:5px;position:absolute;left:50%;margin-left:-3px;top:38px}
+.legend-5 .legend-item-tip-arrow{left:220px}/* 
+.legend-mapro-1{border-color:#ff2600;background:white;}
+.legend-mapro-2{border-color:#00ba63;background:white;}
+.legend-mapro-3{border-color:#ffca00;background:white;}
+.legend-mapro-4{border-color:#ff2600;background:white;}
+.legend-mapro-5{border-color:#19ab59;background:white;}
+.legend-mapro-6{border-color:#fffb00;background:white;}
+.legend-mapro-7{border-color:#ff2600;background:white;} */
+.dwBottom li{width: 360px; height: 25px; list-style-type: none;line-height:25px;}
+.dwBottom li i{border: 1px solid #ddd;width: 15px;height: 15px;
+		float: left; margin: 0 5px 0 0;position:relative;top:5px}
+.dwBottom li .i-1{background: #f29173;}
+.dwBottom li .i-2{background: #fff694;}
+.dwBottom li .i-3{background: #f9b580;}
+.dwBottom li .i-4{background: #fcd0cc;}
+.dwBottom li .i-5{background: #8ab9dc;}
+.dwBottom li .i-6{background: #89c28f;}
+.dwBottom li .i-7{background: #cdafce;}
+.legend-mapro-1 .legend-item-tip{background:url(../../../../images/logo/1.png) no-repeat 14px 50% #fff}
+.legend-mapro-2 .legend-item-wrapper{left:-94px}
+.legend-mapro-2 .legend-item-tip{background:url(../../../../images/logo/2.png) no-repeat 14px 50% #fff}
+.legend-mapro-3 .legend-item-wrapper{left:-94px}
+.legend-mapro-3 .legend-item-tip{background:url(../../../../images/logo/3.png) no-repeat 14px 50% #fff}
+.legend-mapro-4 .legend-item-wrapper{left:-94px}
+.legend-mapro-4 .legend-item-tip{background:url(../../../../images/logo/4.png) no-repeat 14px 50% #fff}
+.legend-mapro-5 .legend-item-wrapper{left:-94px}
+.legend-mapro-5 .legend-item-tip{background:url(../../../../images/logo/5.png) no-repeat 14px 50% #fff}
+.legend-mapro-6 .legend-item-tip{background:url(../../../../images/logo/6.png) no-repeat 14px 50% #fff}
+.legend-mapro-7 .legend-item-tip{background:url(../../../../images/logo/7.png) no-repeat 14px 50% #fff}
+
+.zdgc-con .legend-item{color:#333; border:none; background:white; font-weight:700;width: 50px;}
+.zdgc-con .legend-item img{position:relative; top:-1px}
+.zdgc-con .legend-item-tip{width:150px; padding:6px 14px 6px 25px}
+.zdgc-con .legend-item-wrapper{left:-45px}
+.zdgc-con .legend-mapro-2 .legend-item-wrapper{left:-45px}
+.zdgc-con .legend-mapro-3 .legend-item-wrapper{left:-45px}
+.zdgc-con .legend-mapro-4 .legend-item-wrapper{left:-45px}
+.zdgc-con .legend-mapro-5 .legend-item-wrapper{left:-45px}
+.zdgc-con .legend-mapro-6 .legend-item-wrapper{left:-45px}
+.zdgc-con .legend-mapro-7 .legend-item-wrapper{left:-70px}
+.zdgc-con .legend-mapro-7 .legend-item-wrapper .legend-item-tip-arrow{left:70%}

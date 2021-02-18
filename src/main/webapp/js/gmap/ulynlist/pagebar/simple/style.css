@@ -1,0 +1,142 @@
+.simple-pagebar .m-pagination {
+    height: 26px;
+    padding-top: 10px;
+    line-height: 26px;
+    text-align: right;
+    color: #666 ;
+}
+
+.simple-pagebar .m-pagination .inner {
+    display: inline-block
+}
+
+.simple-pagebar .m-pagination .btn, .simple-pagebar .m-pagination .btn-disabled, .simple-pagebar .m-pagination .active {
+    display: inline-block;
+    min-width: 16px;
+    _width: 16px;
+    height: 24px;
+    padding: 0 5px;
+    border: 1px solid #CCC;
+    line-height: 24px;
+    white-space: nowrap;
+    font-family: Tahoma, SimSun, Arial;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none
+}
+
+.simple-pagebar .m-pagination .btn {
+    color: #000;
+    cursor: pointer;
+}
+
+.simple-pagebar .m-pagination .btn:focus, .simple-pagebar .m-pagination .btn:hover {
+    /*border-color: #f60*/
+}
+
+.simple-pagebar .m-pagination .active {
+    border-color: #f60;
+    font-weight: bold;
+    color: #f60;
+    background-color: #ffede1
+}
+
+.simple-pagebar .m-pagination .prev, .simple-pagebar .m-pagination .next {
+    position: relative;
+    width: 36px
+}
+
+.simple-pagebar .m-pagination .prev .triangle, .simple-pagebar .m-pagination .next .triangle {
+    position: absolute;
+    top: 8px
+}
+
+.simple-pagebar .m-pagination .prev {
+    padding-left: 20px
+}
+
+.simple-pagebar .m-pagination .prev .triangle {
+    left: 4px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-style: dashed;
+    border-color: transparent;
+    border-width: 5px;
+    font-size: 0;
+    border-right-style: solid;
+    border-right-color: #f60
+}
+
+.simple-pagebar .m-pagination .next {
+    padding-right: 20px
+}
+
+.simple-pagebar .m-pagination .next .triangle {
+    right: 4px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-style: dashed;
+    border-color: transparent;
+    border-width: 5px;
+    font-size: 0;
+    border-left-style: solid;
+    border-left-color: #f60
+}
+
+.simple-pagebar .m-pagination .btn-disabled {
+    color: #666
+}
+
+.simple-pagebar .m-pagination .btn-disabled .prev-triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-style: dashed;
+    border-color: transparent;
+    border-width: 5px;
+    font-size: 0;
+    border-right-style: solid;
+    border-right-color: #ccc
+}
+
+.simple-pagebar .m-pagination .btn-disabled .next-triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-style: dashed;
+    border-color: transparent;
+    border-width: 5px;
+    font-size: 0;
+    border-left-style: solid;
+    border-left-color: #ccc
+}
+
+.simple-pagebar .m-pagination .text {
+    display: inline-block
+}
+
+.simple-pagebar .m-pagination .submit {
+    height: 22px;
+    padding: 0 2px
+}
+
+.simple-pagebar .m-pagination .num {
+    width: 30px;
+    height: 18px;
+    border: solid 1px #999;
+    text-align: center
+}
+.simple-pagebar .m-pagination .go_button {
+    border: 1px solid #ddd;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: #999;
+    background: #F3F3F3;
+}

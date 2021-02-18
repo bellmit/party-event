@@ -1,0 +1,329 @@
+@charset "UTF-8";
+/*@mixin size28{
+  font-size: px2rem(28);
+}*/
+/*.wrap {
+  /!*background: #fff;*!/
+  position: relative;
+}*/
+.header {
+  background: #fff;
+  text-align: center
+  /* position: fixed;
+   top: 0;
+   left: 0;
+   right:0;*/ }
+  .header ul.nav-tabs {
+    border-bottom: none; }
+  .header ul li {
+    width: 50%; }
+    .header ul li a {
+      color: #000;
+      padding: 0.64rem 1.28rem; }
+    .header ul li.active {
+      color: #0075c2;
+      border-bottom: 0.064rem solid #0075c2; }
+      .header ul li.active a {
+        color: #0075c2;
+        border: none; }
+        .header ul li.active a:hover, .header ul li.active a:focus {
+          text-decoration: none;
+          background: none;
+          border: none;
+          color: #0075c2; }
+
+.search {
+  margin: 0 auto;
+  padding: 0.42667rem;
+  background: #e8e8e8; }
+  .search div {
+    position: relative; }
+    .search div input {
+      display: inline-block;
+      vertical-align: middle;
+      height: 1.70667rem;
+      border-radius: 0.32rem;
+      font-size: 0.59733rem;
+      font-family: "黑体",sans-serif;
+      padding: 0.256rem 0.64rem;
+      width: 70%; }
+    .search div button {
+      display: inline-block;
+      height: 1.70667rem;
+      margin-left: 5%;
+      border-radius: 0.32rem;
+      font-size: 0.59733rem;
+      font-family: "黑体",sans-serif
+      /*background: #fff url("../images/search.png") no-repeat 97% center;*/
+      /*position: absolute;
+      top: px2rem(6);
+      right: px2rem(20);*/ }
+      .search div button img {
+        width: 0.64rem;
+        height: 0.64rem;
+        margin-right: 0.10667rem;
+        vertical-align: text-bottom; }
+
+#MyMessage .mainBox {
+  top: 2.56rem; }
+
+.mainBox .main .content {
+  border-top: 1px solid #e5e5e3;
+  padding-top: 5%; }
+  .mainBox .main .content:first-child {
+    border-top: none; }
+  .mainBox .main .content .pic {
+    float: left;
+    width: 20%;
+    margin-top: 0.42667rem; }
+    .mainBox .main .content .pic img {
+      margin-left: 0.32rem;
+      width: 2.88rem;
+      height: 2.88rem; }
+  .mainBox .main .content .rightMain {
+    margin-left: 22%;
+    margin-right: 5%;
+    text-align: left; }
+    .mainBox .main .content .rightMain .huifu {
+      float: right
+               /*
+margin-right: px2rem(25);*/
+      /*margin-top: px2rem(15);*/ }
+      .mainBox .main .content .rightMain .huifu:hover, .mainBox .main .content .rightMain .huifu:focus {
+        text-decoration: none; }
+      .mainBox .main .content .rightMain .huifu i {
+        display: inline-block;
+        width: 0.72533rem;
+        height: 0.704rem;
+        vertical-align: middle;
+        margin-right: 0.32rem;
+        background: url(../images/huifu.png) no-repeat center;
+        background-size: cover; }
+    .mainBox .main .content .rightMain p {
+      margin: 0.10667rem 0;
+      font-size: 0.59733rem;
+      font-family: "黑体",sans-serif; }
+    .mainBox .main .content .rightMain .name .szxzq {
+      color: #00A0E9;
+      text-align: center;
+      margin-top: 0.32rem; }
+    .mainBox .main .content .rightMain .times {
+      color: #898989;
+               /*
+float: left;*/
+      margin-bottom: 0; }
+    .mainBox .main .content .rightMain .likes {
+      float: right;
+      display: block;
+      margin-bottom: 0;
+      vertical-align: initial; }
+      .mainBox .main .content .rightMain .likes .nums {
+        vertical-align: middle; }
+      .mainBox .main .content .rightMain .likes i {
+        display: inline-block;
+        margin-right: 0.21333rem;
+        width: 0.85333rem;
+        height: 0.896rem;
+        background: #fff url("../images/likes.png") no-repeat;
+        background-size: cover;
+        vertical-align: middle;
+        margin-bottom: 0.21333rem
+        /* padding:px2rem(5);*/ }
+      .mainBox .main .content .rightMain .likes .likeHover {
+        background: #fff url("../images/likeHover.png") no-repeat;
+        background-size: cover; }
+  .mainBox .main .content .huifuBox {
+    position: relative;
+    width: 100%;
+    background: #eee;
+    margin-top: 0.64rem;
+    margin-bottom: 0.64rem;
+    padding: 0.34133rem; }
+    .mainBox .main .content .huifuBox .xsj {
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: -0.384rem;
+      left: 0.53333rem;
+      border-top: 0 solid transparent;
+      border-right: 0.42667rem solid transparent;
+      border-left: 0.42667rem solid transparent;
+      border-bottom: 0.42667rem solid #eeeeee; }
+    .mainBox .main .content .huifuBox div {
+      margin-bottom: 0.42667rem;
+      word-break: break-all; }
+      .mainBox .main .content .huifuBox div .huifuren {
+        color: #0075c2;
+        margin-right: 0.32rem; }
+      .mainBox .main .content .huifuBox div a {
+        text-decoration: none; }
+        .mainBox .main .content .huifuBox div a:hover, .mainBox .main .content .huifuBox div a:focus {
+          text-decoration: none; }
+  .mainBox .main .content .huifuBoxHide {
+    display: none; }
+
+.modal-content {
+  /* border-radius: px2rem(35);*/
+  padding: 0.32rem; }
+
+.writeMessage {
+  padding: 0.42667rem;
+  bottom: 1.664rem;
+  background: #e8e8e8
+  /* position: absolute;
+   left: 0;
+   right: 0;*/ }
+  .writeMessage textarea {
+    width: 100%;
+    height: 4.90667rem;
+    border: none; }
+  .writeMessage p {
+    padding: 0rem 0.42667rem 0.32rem;
+    font-family: "黑体",sans-serif;
+    font-size: 0.512rem; }
+
+.write a {
+  display: inline-block;
+  width: 50%;
+  padding: 0.42667rem 2.13333rem;
+  text-align: center;
+  float: left; }
+  .write a.present {
+    background: #0075c2;
+    color: #fff; }
+  .write a.cancel {
+    background: #b1b1b1;
+    color: #595959; }
+
+.cancel:focus, .cancel:active, .huifu:focus, .huifu:active {
+  color: rgba(0, 117, 194, 0.8); }
+
+.present:focus, .present:active, .doMessage:focus, .doMessage:active {
+  text-decoration: none;
+  background: rgba(0, 117, 194, 0.8); }
+
+/*查看图片*/
+/*
+.bigImg {
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin: 5%;
+  z-index: 99999;
+  a {
+    display: block;
+    float: right;
+    margin-right: px2rem(30);
+    color: #000;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    margin: px2rem(30);
+
+  }
+}*/
+.lg-img {
+  width: 100%;
+  height: 100%; }
+
+.modal-dialog {
+  width: 90%;
+  margin: 0.74667rem;
+  margin-top: 3.2rem; }
+  .modal-dialog .close {
+    width: 1.28rem;
+    height: 1.28rem;
+    font-size: 1.28rem; }
+
+.leaveMessage {
+  word-break: break-all; }
+
+/*引导效果*/
+/*
+.overlay-hole {
+  width: 100% !important;
+  top: 8.5% !important;
+  left: 0 !important;
+}
+#tooltipWrapper {
+  width: 100% !important;
+}
+#jpwClose {
+  display: none !important;
+}
+#jpwTooltip {
+  margin: 0 px2rem(25) !important;
+  text-align: center !important;
+}
+#jpwTooltip a:focus,a:active {
+  text-decoration: none !important;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner {
+  font-size: px2rem(45) !important;
+  line-height:1.5 !important;
+  text-align: left !important;
+}
+#tooltipInner {
+  margin-bottom: 5%;
+}
+#jpwClose, #jpwNext, #jpwPrevious, #jpwFinish {
+  font-size: px2rem(45) !important;
+}*/
+#mask {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none; }
+
+div.step {
+  position: absolute;
+  z-index: 99999;
+  height: 90px;
+  width: 98%;
+  display: none; }
+  div.step .transparentDiv {
+    width: 100%;
+    height: 2.56rem;
+    position: absolute;
+    top: -107%;
+    left: -2%;
+    z-index: 999998;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 100px 10000px; }
+  div.step .transparentText {
+    background: url(../images/guide/arrow-top.png) no-repeat 50% 0 transparent;
+    height: 268px;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: block;
+    z-index: 999999;
+    margin-top: 10%;
+    padding: 15% 10% 10%;
+    text-align: center; }
+    div.step .transparentText p {
+      position: relative;
+      text-align: left;
+      color: #fff;
+      font-size: 0.96rem; }
+      div.step .transparentText p:last-child {
+        margin-bottom: 1.06667rem; }
+    div.step .transparentText button {
+      margin: 0 auto;
+      margin-bottom: 1.06667rem;
+      padding: 0.32rem;
+      min-width: 6.4rem; }
+    div.step .transparentText .firstBtn {
+      margin-top: 1.06667rem; }
+
+/*# sourceMappingURL=index.css.map */

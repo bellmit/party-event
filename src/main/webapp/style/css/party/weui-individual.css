@@ -1,0 +1,36 @@
+/*
+*  weui框架特殊化样式
+*      --定制化修改-180105
+*      --liux
+*/
+.weui-cell{
+    padding: 12px 15px;
+}
+a.weui-cell{
+    color: #333;
+}
+.weui-cell:before{
+    left: 0;
+}
+
+/* 党建项目 补充 180105 */
+.party-menu .weui-grid{
+    padding: 8px;
+}
+.weui-grid__icon{
+    width: 60px;
+    height: 60px;
+}
+.weui-btn_mini{
+    padding: 0 0.5em;
+    line-height: 2.6;
+    font-size: 15px;
+}
+.weui-grid:before,.weui-grid:after{
+    border: none;
+    width: 0;
+}
+.weui-grid:active{
+    background-color:#fff;
+    color:#f43530;
+}

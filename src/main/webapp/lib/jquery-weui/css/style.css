@@ -1,0 +1,22 @@
+body, html {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sign-header {
+  height: 50px;
+    line-height: 50px;
+    background-color: #d2d2d2;
+    padding-left: 15px;
+}
+.sign-title {
+    font-size:18px;
+    color: #04be02;
+    font-weight: 400;
+}
+.btn-con{
+    margin: 30px 15px;
+}
+.weui_cells{
+    margin-top: 0!important;
+}

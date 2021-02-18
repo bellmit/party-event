@@ -1,0 +1,9 @@
+@charset "utf-8";
+.ssair_notice_table .snotice_ul{margin:0 auto;}
+.ssair_notice_table .snotice_ul li{height:38px; line-height:38px; border-bottom:1px dotted #999; padding:0 4px 0 2px}
+.ssair_notice_table .snotice_ul li i{color:#80bf19; font-family:arial; margin-right:5px}
+.ssair_notice_table .snotice_ul li .tips{color:#dc2236; margin-right:5px}
+.ssair_notice_table .snotice_ul li a{color:#555}
+.ssair_notice_table .snotice_ul li a:hover{color:#dc2236}
+.ssair_notice_table .snotice_ul li .time{color:#999;}
+.ssair_notice_table .fl {float: left;display: inline;}

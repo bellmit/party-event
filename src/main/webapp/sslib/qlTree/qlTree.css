@@ -1,0 +1,141 @@
+@charset "utf-8";
+/**
+ * 版权所有：厦门畅享信息技术有限公司
+ * Copyright 2014 Xiamen Sunsharing Information CO., LTD.
+ * All right reserved. 
+ *====================================================
+ * 文件名称: public-sidebar.css
+ * 修订记录：
+ * No    日期				作者(操作:具体内容)
+ * 1.    14-10-29			Administrator(创建:创建文件)
+ *====================================================
+ * 文件描述：(说明本文件需要实现的内容)
+ * 
+ */
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.content-box{
+    width: 100%;
+    height: 100%;
+}
+.cb-sidebar{
+    width: 185px;
+    border-right: 1px solid #ccc;
+    height: 100%;
+    overflow-y:auto;
+    float:left;
+    left: 0;
+    background-color: #e5e6e8;
+    top: 0;
+}
+.cb-sidebar>h3{
+    color: #125683;
+    height: 47px;
+    line-height: 47px;
+    padding-left: 5px;
+}
+.cb-sidebar>h3 img{
+    margin-right: 3px;
+}
+/* 一级菜单 */
+.cb-sidebar #qlTree>ul ul{
+    display: none;
+}
+.cb-sidebar #qlTree a{
+    display: block;
+    cursor: pointer;
+}
+.cb-sidebar #qlTree a:focus,.cb-sidebar #qlTree a:visited{
+    outline: none;
+}
+.cb-sidebar #qlTree>ul{
+    border-top: 1px solid #ccc;
+}
+.cb-sidebar #qlTree>ul>li>a{
+    border-bottom: 1px solid #ccc;
+    background: #dbdede;
+    -moz-user-select:none;
+    position: relative;
+}
+.cb-sidebar #qlTree>ul>li>a:hover{
+    background-color: #c6d1d6;
+}
+.cb-sidebar #qlTree>ul>li>a .i_end{
+    position: absolute;
+    right: 25px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    background: url("../../images/ico_narrowed.png") no-repeat;
+}
+.cb-sidebar #qlTree>ul>li.expand>a .i_end{
+    background-image: url("../../images/ico_open.png");
+}
+.cb-sidebar #qlTree>ul>li>a{
+    padding:12px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 47px;
+    text-decoration: none;
+    color: #3678a4;
+}
+.cb-sidebar #qlTree>ul>li>a:before{
+    content: "";
+    display: inline-block;
+    vertical-align: -2px;
+    width: 16px;
+    height: 16px;
+    background: url("../../images/ico_tb.png") no-repeat;
+    margin-right: 10px;
+}
+/* 二级菜单 */
+.cb-sidebar #qlTree>ul>li>ul>li>a{
+    color: #6c6c6c;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.cb-sidebar #qlTree>ul>li>ul>li>a:hover,.cb-sidebar #qlTree>ul>li>ul>li.cur>a{
+    color: #6c6c6c;
+    background-color: #c6d1d6;
+}
+
+
+/*==== 内容区 ====*/
+.cb-content{
+    margin-left: 185px;
+    height: 100%;
+    position: relative;
+}
+.cb-content .cc-top{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.cb-content .cc-top h3{
+    background: #f4f6f5;
+    border-bottom: 1px solid #dcdedf;
+    color: #125683;
+    font-weight: bold;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 15px;
+}
+.cb-content .cc-main{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 47px;
+    bottom: 0;
+    overflow: auto;
+}
+.cm-box{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}

@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+.list_div{
+	font-size:14px;
+	width:100%;
+}
+.listpackage{
+	border-collapse:collapse;
+	width:100%;
+    padding: 0;
+    margin: 0;
+	text-align:center;
+    table-layout:fixed;
+    border-left: 1px solid #7EC0EC;
+}
+.listpackage th{
+    padding:8px 10px;
+    border-right: 1px solid #7EC0EC;
+    border-bottom: 1px solid #7EC0EC;
+    border-top: 1px solid #7EC0EC;
+}
+.listpackage th{
+	background:#4CA9E6;
+	color:#fff;
+}
+.listpackage th.sortable{
+	cursor:pointer;
+}
+.listpackage th.asc span{
+	padding:0 10px;
+	background:url(images/sortAsc.gif) right 8px no-repeat;
+}
+.listpackage th.desc span{
+	padding:0 10px;
+	background:url(images/sortDesc.gif) right 8px no-repeat;
+}
+.listpackage tr:hover{
+	background:#D2E9F9;
+}
+.listpackage td{
+    border-right: 1px solid #7EC0EC;
+    border-bottom: 1px solid #7EC0EC;
+    width: 100%;   /* IE6 needs any width */
+    padding: 8px 6px 8px 6px;
+    overflow:hidden;
+    word-break:keep-all;/* 不换行 */
+    white-space:nowrap;
+    word-wrap:normal; /* IE8 9 */
+    -o-text-overflow:ellipsis; /* opera */
+    -webkit-text-overflow:ellipsis;  /* Chrome, Safari */
+    -ms-text-overflow:ellipsis; /* IE8 标准模式 */
+    text-overflow:ellipsis;  /* IE, WebKit (Safari, Chrome), Firefox 7, Opera 11 */
+}
+
+
+
+.listpackage_footer{
+	width:100%;
+}
+.listpackage_footer .listpackage_footer_p{
+	padding:8px 0px;
+	width:90%;
+	margin:0 auto;
+	text-align:right;
+}
+.listpackage_footer .listpackage_footer_p em{
+	font-style:normal;
+}
+.listpackage_footer .listpackage_footer_p b{
+	font-weight:normal;
+}
+.listpackage_footer .listpackage_footer_p .listpackage_footer_firstpage{
+	display:inline-block;
+	width:26px;
+	height:22px;
+	background:url(images/firstPageDisabled.gif) left top no-repeat;
+}
+.listpackage_footer .listpackage_footer_p .listpackage_footer_firstpage:hover{
+	background:url(images/firstPageDisabled.gif) left top no-repeat;
+}
+.listpackage_footer .listpackage_footer_p .listpackage_footer_enable .listpackage_footer_firstpage:hover{
+	background:url(images/firstPage.gif) left top no-repeat;
+}
+
+
+.beauty-inpt .label_check,
+.beauty-inpt .label_radio { padding-left: 0px; }
+.beauty-inpt .label_radio { background: url(images/radio-off.png) no-repeat; }
+.beauty-inpt .label_check { background: url(images/check-off.png) no-repeat; }
+.beauty-inpt label.c_on { background: url(images/check-on.png) no-repeat; }
+.beauty-inpt label.r_on { background: url(images/radio-on.png) no-repeat; }
+.beauty-inpt .label_check input,
+.beauty-inpt .label_radio input { position: absolute; left: -9999px; }

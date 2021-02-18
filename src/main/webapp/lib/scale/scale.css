@@ -1,0 +1,41 @@
+.imgzoom_pack {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background: rgba(0, 0, 0, 0.7);
+  display: none; }
+
+.imgzoom_pack .imgzoom_x {
+  color: #fff;
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+  background: #008ce1;
+  text-align: center;
+  position: absolute;
+  right: 0.44444rem;
+  top: 0.44444rem;
+  z-index: 10;
+  cursor: pointer;
+  border-radius: 50%;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 1.42222rem; }
+
+.imgzoom_pack .imgzoom_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden; }
+
+.imgzoom_pack .imgzoom_img img {
+  width: 100%;
+  position: absolute;
+  top: 50%; }
+
+/*# sourceMappingURL=scale.css.map */

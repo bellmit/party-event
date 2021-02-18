@@ -1,0 +1,429 @@
+@charset "UTF-8";
+@import '../lib/hotcss-master/src/px2rem'; //第一步先把px2rem导入
+
+$designWidth : 750; //写scss之前，必须要先定义designWidth。
+@mixin size28{
+  font-size: px2rem(28);
+  font-family:"黑体",sans-serif;
+}
+/*@mixin size28{
+  font-size: px2rem(28);
+}*/
+/*.wrap {
+  /!*background: #fff;*!/
+  position: relative;
+}*/
+.header {
+  background: #fff;
+  text-align: center;
+ /* position: fixed;
+  top: 0;
+  left: 0;
+  right:0;*/
+  ul {
+    &.nav-tabs {
+      border-bottom: none;
+    }
+    li {
+      width: 50%;
+      a {
+        color: #000;
+        padding: px2rem(30) px2rem(60);
+      }
+      &.active {
+        color: #0075c2;
+        border-bottom: px2rem(3) solid #0075c2;
+        a{
+          color: #0075c2;
+          border: none;
+
+          &:hover, &:focus {
+            text-decoration: none;
+            background: none;
+            border: none;
+            color: #0075c2;
+        }
+      }
+    }
+    }
+  }
+
+}
+.search {
+  margin: 0 auto;
+  padding: px2rem(20);
+  background: #e8e8e8;
+  div {
+    position: relative;
+    input {
+      display: inline-block;
+      vertical-align: middle;
+      height:px2rem(80);
+      border-radius: px2rem(15);
+      @include size28;
+      padding:px2rem(12) px2rem(30);
+      width: 70%;
+
+    }
+    button {
+      display: inline-block;
+      height:px2rem(80);
+      margin-left: 5%;
+      border-radius: px2rem(15);
+      @include size28;
+      /*background: #fff url("../images/search.png") no-repeat 97% center;*/
+      /*position: absolute;
+      top: px2rem(6);
+      right: px2rem(20);*/
+      img {
+        width: px2rem(30);
+        height: px2rem(30);
+        margin-right: px2rem(5);
+        vertical-align: text-bottom;
+      }
+    }
+  }
+
+}
+#MyMessage {
+  .mainBox {
+    top: px2rem(120);
+  }
+}
+.mainBox {
+
+  .main {
+
+
+    .content {
+      border-top: 1px solid #e5e5e3;
+      padding-top: 5%;
+      &:first-child{
+        border-top: none;
+      }
+      .pic {
+        float: left;
+        width: 20%;
+        margin-top: px2rem(20);
+        img {
+          margin-left:px2rem(15);
+          width: px2rem(135);
+          height:px2rem(135);
+        }
+
+      }
+      .rightMain {
+        margin-left: 22%;
+        margin-right:5%;
+
+        text-align: left;
+        .huifu {
+          float: right;/*
+        margin-right: px2rem(25);*/
+          /*margin-top: px2rem(15);*/
+
+            &:hover,&:focus {
+              text-decoration: none;
+            }
+
+          i {
+            display: inline-block;
+            width: px2rem(34);
+            height: px2rem(33);
+            vertical-align: middle;
+            margin-right: px2rem(15);
+            background: url(../images/huifu.png) no-repeat center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+          }
+        }
+        p {
+          margin: px2rem(5) 0;
+          @include size28;
+        }
+        .name {
+          .szxzq {
+            color: #00A0E9;
+            text-align: center;
+            margin-top: px2rem(15);
+          }
+        }
+        .times {
+          color: #898989;/*
+          float: left;*/
+          margin-bottom:0;
+        }
+        .likes {
+          float: right;
+          display: block;
+          margin-bottom:0;
+          vertical-align: initial;
+          .nums {
+            vertical-align: middle;
+
+          }
+          i {
+            display: inline-block;
+            margin-right:px2rem(10);
+            width: px2rem(40);
+            height: px2rem(42);
+            background: #fff url("../images/likes.png") no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            vertical-align: middle;
+            margin-bottom:px2rem(10);
+           /* padding:px2rem(5);*/
+          }
+          .likeHover {
+            background: #fff url("../images/likeHover.png") no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+          }
+        }
+
+      }
+
+
+      .huifuBox {
+        position: relative;
+        width:100%;
+        background: #eee;
+        margin-top:px2rem(30);
+        margin-bottom:px2rem(30);
+        padding:px2rem(16);
+
+        .xsj {
+          display: block;
+          width:0;
+          height:0;
+          position: absolute;
+          top: px2rem(-18);
+          left: px2rem(25);
+          border-top: 0 solid transparent;
+          border-right: px2rem(20) solid transparent;
+          border-left: px2rem(20) solid transparent;
+          border-bottom: px2rem(20) solid #eeeeee;
+        }
+        div {
+          margin-bottom:px2rem(20);
+          word-break: break-all;
+          .huifuren {
+            color: #0075c2;
+            margin-right:px2rem(15);
+
+          }
+          a {
+            text-decoration: none;
+            &:hover,&:focus {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .huifuBoxHide {  display: none;}
+    }
+  }
+}
+
+
+
+.modal-content {
+ /* border-radius: px2rem(35);*/
+  padding: px2rem(15);
+}
+.writeMessage {
+  padding: px2rem(20);
+  bottom: px2rem(78);
+  background: #e8e8e8;
+ /* position: absolute;
+  left: 0;
+  right: 0;*/
+  textarea {
+    width: 100%;
+    height: px2rem(230);
+    border: none;
+  }
+
+  p {
+    padding: px2rem(0) px2rem(20) px2rem(15);
+    font-family: "黑体",sans-serif;
+    font-size: px2rem(24);
+  }
+
+}
+.write {
+  a {
+    display: inline-block;
+    width: 50%;
+    padding: px2rem(20) px2rem(100);
+    text-align: center;
+    float: left;
+    &.present {
+      background: #0075c2;
+      color: #fff;
+    }
+    &.cancel {
+      background: #b1b1b1;
+      color: #595959;
+    }
+  }
+
+
+}
+.cancel,.huifu {
+  &:focus,&:active {
+    color: rgba(0, 117, 194, 0.8);
+  }
+}
+.present,.doMessage {
+  &:focus,&:active {
+    text-decoration: none;
+    background: rgba(0, 117, 194, 0.8);
+  }
+}
+
+/*查看图片*/
+/*
+.bigImg {
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin: 5%;
+  z-index: 99999;
+  a {
+    display: block;
+    float: right;
+    margin-right: px2rem(30);
+    color: #000;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    margin: px2rem(30);
+
+  }
+}*/
+.lg-img {
+  width: 100%;
+  height: 100%;
+}
+.modal-dialog {
+  width: 90%;
+  margin:px2rem(35);
+  margin-top: px2rem(150);
+  .close {
+    width: px2rem(60);
+    height: px2rem(60);
+    font-size: px2rem(60);
+  }
+}
+
+
+
+
+.leaveMessage {
+  word-break: break-all;
+}
+
+/*引导效果*/
+/*
+.overlay-hole {
+  width: 100% !important;
+  top: 8.5% !important;
+  left: 0 !important;
+}
+#tooltipWrapper {
+  width: 100% !important;
+}
+#jpwClose {
+  display: none !important;
+}
+#jpwTooltip {
+  margin: 0 px2rem(25) !important;
+  text-align: center !important;
+}
+#jpwTooltip a:focus,a:active {
+  text-decoration: none !important;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner {
+  font-size: px2rem(45) !important;
+  line-height:1.5 !important;
+  text-align: left !important;
+}
+#tooltipInner {
+  margin-bottom: 5%;
+}
+#jpwClose, #jpwNext, #jpwPrevious, #jpwFinish {
+  font-size: px2rem(45) !important;
+}*/
+#mask {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+div.step {
+  position: absolute;
+  z-index: 99999;
+
+  height: 90px;
+  width: 98%;
+  display: none;
+  .transparentDiv {
+    width: 100%;
+    height: px2rem(120);
+    position: absolute;
+    top:-107%;
+    left: -2%;
+    z-index: 999998;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 100px 10000px;
+  }
+  .transparentText{
+    background: url(../images/guide/arrow-top.png) no-repeat 50%  0 transparent;
+    height: 268px;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: block;
+    z-index: 999999;
+    margin-top: 10%;
+    padding: 15% 10% 10%;
+    text-align: center;
+    p {
+      position: relative;
+      text-align: left;
+      color: #fff;
+      font-size: px2rem(45);
+      &:last-child{
+        margin-bottom: px2rem(50);
+      }
+    }
+    button {
+      margin: 0 auto;
+      margin-bottom: px2rem(50);
+      padding: px2rem(15);
+      min-width: px2rem(300);
+
+
+    }
+    .firstBtn {
+      margin-top: px2rem(50);
+    }
+
+  }
+}

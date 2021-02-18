@@ -1,0 +1,171 @@
+@charset "utf-8";
+/* CSS Document */
+
+.registration_content{
+	width:100%;
+	/*min-height:600px;*/
+	position:relative;
+}
+.logo_small{
+	position:absolute;
+	right:45%;
+	top:-5px;
+	width:65px;
+	height:65px;
+	background:url(../images/logo_small.png) left top no-repeat;
+}
+
+/*registration_input_info*/
+.registration_input_info{
+	width:88%;
+	margin:60px auto 0;
+}
+.registration_info{
+	position:relative;
+	margin-top:20px;
+}
+.registration_info label{
+	display:inline-block;
+	font-size:16px;
+	color:#425459;
+	width:100px;
+	height:35px;
+	line-height:35px;
+	/*float:left;*/
+	text-align:right;
+}
+.registration_input_info .address_info label{
+	height:80px;
+	line-height:80px;
+}
+.registration_input_info .address_info select{
+	width:100%;
+	/*height:45px;*/
+	/*border:2px solid #559CB0;*/
+	font-size:20px;
+	padding:5px 0;
+}
+/* 新增-20161202 */
+.registration_input_info .address_info .input_div{
+	border:none;
+	background:none;
+}
+
+.registration_input_info .address_info select+select{
+	margin-top:10px;
+}
+.registration_info input{
+	text-indent:5px;
+	/*float:left;*/
+	height:29px;
+	line-height:29px;
+	width:99%;
+	/*width:calc(100% - 4px);*/
+	font-size:16px;
+	border:none;
+}
+.registration_info input[type='text'],.registration_info input[type='password'],.registration_info input[type='number']{
+    /*width: 98%;*/
+    background:transparent;
+    height: 25px ;
+}
+.sub_btn{
+	margin-top:30px;
+	text-align:center;
+}
+.sub_btn .login_btn{
+	width:200px;
+	height:42px;
+	background:url(../images/btn_registration.png) left top no-repeat;
+	font-size:20px;
+	color:#fff;
+	border:none;
+}
+
+.input_div{
+	background:#fff;
+	position:absolute;
+	left:100px;
+	right:0;
+	top:0;
+	bottom:0;
+	border:2px solid #559CB0;
+}
+.registration_info tt{
+	color:#f00;
+}
+
+
+.input_div22{
+	/* background:#fff; */
+	position:absolute;
+	left:90px;
+	right:0;
+	top:0;
+	bottom:0;
+	display:inline;
+	/* border:2px solid #559CB0; */
+}
+
+/* 新增 */
+
+.abutton{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    background: #3899B9;
+    display: inline-block;
+    padding: 7px 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+}
+/* 密码找回 */
+.saveStep{width:250px; height:25px; margin-top:5px }
+.saveStep span{width:70px; height:25px; line-height:25px; text-align:center; margin-right:1px; float:left; color:#fff }
+.saveStep .step_1{background:#1e7700}
+.saveStep .step_2{background:#78ad66}
+.saveStep .step_3{background:#bbd6b2}
+
+/* 实名认证 */
+.registration_input_info{padding-bottom: 50px}
+.time-input{ width: auto!important;position: absolute;left: 30px; top: 6px }
+.style-input{width: auto!important; text-indent: 0!important; position: absolute; left: 0;top: 6px }
+.sfz-img{ position: absolute; left: 90px;top:0;height: 320px;}
+.img-show{width: 100%; height: 150px}
+.img-show img{width: 200px; height: 120px; position: absolute;top: 0; left: 0; z-index: 101; border: 1px solid #bbb; border-radius: 5px}
+.big-img-a{color: #3899B9; position: absolute; left: 80px; top: 130px; z-index: 102; font-size: 12px}
+.img-tips{width: 100%;}
+.img-tips img{width: 200px; height: 120px;}
+.abutton{position: absolute;right: 0;top: 0;font-size: 12px;background: #3899B9;display: inline-block;padding: 7px 10px;color: #fff;text-decoration: none;border-radius: 8px; }
+
+.address-select{
+    width: 100%;
+    height: 36px;
+    border: none;
+    /*background: none;*/
+    font-size: 16px;
+}
+
+/* 首次登录 */
+.login-first-info{
+    margin: 60px 30px 0;
+    color: #015F8B;
+}
+.login-first-info .text_content{
+    text-align: center;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+}
+.login-first-value{
+    border: 1px solid #015F8B;
+    padding: 10px;
+    border-radius: 5px;
+}
+.login-first-value p{
+    margin: 0;
+    padding: 5px 0;
+    line-height: 26px;
+}

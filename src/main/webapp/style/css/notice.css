@@ -1,0 +1,32 @@
+@charset "utf-8";
+.logo_bg{
+	height:300px;
+	width:100%;
+	background:url(../images/logo_do.png) center 70px no-repeat;
+}
+.notice_text p.text_content{
+	margin:0 10px;
+	text-align:center;
+	font-size:22px;
+	height:30px;
+	line-height:30px;
+	font-family:"宋体";
+	color:#015F8B;
+}
+
+.sub_btn{
+    margin-top:30px;
+    text-align:center;
+}
+.sub_btn .toLogin{
+    display: inline-block;
+    width:200px;
+    height:42px;
+    line-height: 42px;
+    text-align: center;
+    text-decoration: none;
+    background:url(../images/btn_registration.png) left top no-repeat;
+    font-size:20px;
+    color:#fff;
+    border:none;
+}

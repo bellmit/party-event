@@ -1,0 +1,105 @@
+@charset "utf-8";
+/**
+ * 版权所有：厦门畅享信息技术有限公司
+ * Copyright 2014 Xiamen Sunsharing Information CO., LTD.
+ * All right reserved. 
+ *====================================================
+ * 文件名称: base.css.css
+ * 修订记录：
+ * No    日期				作者(操作:具体内容)
+ * 1.    14-2-28			sunsharing(创建:创建文件)
+ *====================================================
+ * 文件描述：(说明本文件需要实现的内容)
+ * 
+ */
+/*------------------------全局变量-------------------------------------*/
+body,h1,h2,h3,h4,h5,h6,dd,dl,dt,form,th,td,ul,li,ol,p{ margin:0;padding:0;}
+body{font-size:12px;font-family:"宋体",HELVETICA; color:#BEBCBD;line-height:22px; background:#ebeced!important}
+input,select{font-size:12px;line-height:16px;}
+input[type="file"]{width:65px; margin-right:5px}
+img{ border:0;}
+ul,li,ol{list-style-type:none; color:#666666;}
+table{border-collapse:collapse;border-spacing:0; display:table}
+td, th {padding: 5px 10px;border: 1px solid #DDD;}
+.tc{text-align:center;}
+.tl{text-align:left;}
+.tr{text-align:right;}
+.dis{display:block;}
+.undis{display:none;}
+.fl{float:left;}
+.fr{float:right;}
+.cl{clear:both;}
+.fb{font-weight:bold;}
+.fnb{font-weight:200;margin-left:-1px;}
+tr{color:#666666;}
+code{background: none;border: none;padding: 0;font-family: "宋体";}
+a{color:#666666;text-decoration:none; font-weight:normal;}
+a:hover {color:#bd0a01;text-decoration:none;}
+h2,h3,h4,h5{font-size:14px; color:#333;}
+h6{font-size:12px; color:#333; font-weight:normal;}
+span{font-size:12px; color:#666666; font-weight:normal;}
+em,i{font-style:normal;}
+p{font-size:12px; color:#333;}
+.clearfix:after {clear:both; content:'';display: block;font-size: 0;line-height: 0;visibility: hidden; width: 0;height: 0;}
+.tooltip{min-width: 80px;}
+.clearfix {+display: inline-block;}
+* html .clearfix {height: 1%;}
+
+/*以上部分为css格式化定义*/
+
+.ulynlist_flat_table td,.ulynlist_flat_table th{
+	padding:0;
+	border:0
+}
+
+/* 修改老版ulynlist的样式来适应社区3.0的版本-180112 */
+.content-wrap .main-content .mc_main {
+	margin-left:0!important;
+	margin-right:0!important;
+}
+.mc_main .form-inline{
+	padding:0 15px;
+	background:#fff;
+}
+.content-wrap .main-content .mc_main .form-group{
+	margin:13px 0 15px!important;
+}
+.mc_main .table-content{
+	margin-top:13px;
+	background: #fff;
+}
+.mc_main .table-content .table-title{
+	padding: 0 12px;
+    line-height: 34px;
+    min-height: 36px;
+    border-bottom: 2px solid #09d;
+}
+.mc_main .table-content .table-title b{
+	color:#323538
+}
+.mc_main .table-content .table-title .title-right{
+	float:right;
+}
+.mc_main .table-content .table-title .title-right button,.mc_main .table-content .table-title .title-right a{
+	color:#55585d;
+	border:none; 
+	background:transparent;
+}
+.mc_main .table-content .table-title .title-right button > span,.mc_main .table-content .table-title .title-right a > span{
+	margin-right:3px;
+}
+
+.main-detail{
+	padding:0 15px;
+}
+.detail-title{
+	 text-align:right
+}
+.main-detail .setmargin_all_s,.main-detail #artibody p{
+	font-size:14px;
+}
+
+
+
+
+

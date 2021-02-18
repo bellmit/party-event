@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/*当存在排序的情况是后，给th添加一个sortable的样式*/
+.zeus-table th.sortable{
+    cursor:pointer;
+}
+.zeus-table th.sortable span{
+    margin-left: 3px;
+}
+.zeus-table th span{
+    display: inline-block;
+    vertical-align: middle;
+    width: 7px;
+    height: 5px;
+}
+.zeus-table th span{
+    display: none;
+}
+.zeus-table th.desc span{
+    display: inline-block;
+}
+.td_val{
+    display: inline-block;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    color: #666;
+}
+.td_val[overflowview="ellipsis"]{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.td_val[overflowview="normal"]{
+    white-space: normal;
+    overflow: visible;
+    word-wrap: break-word;
+    /*text-overflow: ;*/
+}
+.zeus-table th.asc span{
+    background:url(images/sortAsc.gif) no-repeat;
+}
+.zeus-table th.desc span{
+    background:url(images/sortDesc.gif) no-repeat;
+}
+
+.zeus-table{
+    table-layout: fixed;
+    width: 100%;
+}
+.zeus-table td, .zeus-table th{
+    /*text-align: left;*/
+    text-align: center;
+    height: auto!important;
+    padding: 13px 5px;
+    vertical-align: middle;
+}
+.zeus-table th{
+    color: #666;
+    background: #dbdfe5;
+}
+.zeus-table .even-tr{
+    background: #f2f4f8;
+}
+.zeus-table .table-operation a{
+    margin-left: 10px;
+}
+/*表格第一列需要距离左边20px*/
+.zeus-table th:first-child,
+.zeus-table td:first-child{
+    padding-left: 18px;
+}
+td .table_do_a{
+    margin-left: 10px;
+}
+td .table_do_a:first-child{
+    margin-left: 0;
+}
+.zeus-table tr{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.zeus-table .btn-link{
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 0;
+    border: none;
+}
+.zeus-table .btn-link:first-child{
+    margin-left: 0;
+}
+
+/*操作区新增的dropdown的按钮的样式*/
+.zeus-table .dropdown{
+    cursor: pointer;
+    display: inline-block;
+}
+.zeus-table .dropdown .dropdown-toggle{
+    font-weight: 600;
+}
+.zeus-table .dropdown .dropdown-menu{
+    left: auto;
+    right: 0;
+    min-width: 120px;
+    text-align: center;
+    padding: 0;
+}
+.zeus-table .dropdown .dropdown-menu li{
+    border-bottom: 1px solid #DDD;
+    padding: 6px 10px;
+}
+.zeus-table .dropdown .dropdown-menu li:hover{
+    color: #fff;
+    background-color: #49A4F1;
+}
+.zeus-table .dropdown .dropdown-menu li:hover a{
+    color: #fff;
+    background-color: #49A4F1;
+}
+.zeus-table .dropdown .dropdown-menu li >a{
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}

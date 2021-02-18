@@ -1,0 +1,29 @@
+.mapbtndiv{
+    position: absolute; z-index: 99;
+    right:  10px;
+    top: 10px;
+}
+.mapbtn{
+    background: #fff;
+    padding: 5px;
+    border: #999 solid 1px;
+    color: #777;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.mapbtn:hover{
+    background: #eee;
+}
+
+.lablebtn{
+	width:27px;
+	height:27px;
+	background-image:url('../images/write.png');
+	position:relative;
+	top:35px;
+	left:90px;
+}
+.hideLable{
+	background-image:url('../images/unwrite.png');
+}

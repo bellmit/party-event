@@ -1,0 +1,232 @@
+@charset "utf-8";
+/* CSS Document */
+/* reset */
+body {width:100%;height:100%;padding:0;margin:0; background-color:#f7f8f8;font: normal 100% '微软雅黑';}
+*{ text-shadow:none}
+ul, li, fieldset {list-style:none;margin:0;padding:0}
+h1, h2, h3, h4, h5, p {margin:0}
+a{text-decoration:none; font-weight:normal!important}
+img {border:0}
+input, img {vertical-align:middle}
+table{ border-collapse: collapse}
+* {	-webkit-tap-highlight-color:rgba(0, 0, 0, 0)}
+.none {display:none}
+.hide{display:none!important}
+.cfff{color:#fff!important}
+.clear{clear:both}
+.ui-loader-default h1{display:none}
+.bb0{border-bottom: 0!important;}
+.c999{color: #999!important;}
+.cblue{color: #0082ca!important;}
+.cred{color: #f00!important;}
+.tright{text-align: right!important;}
+.tcenter{text-align: center!important;}
+.fl{float: left!important;}
+.fr{float: right!important;}
+
+/* 便民服务 */
+.app-list{width: 100%;}
+.app-list .app-cell{width: 18%; float: left; margin: 20px 3.5% 0;}
+.app-list .app-cell .app-a{display: block; width: 100%; height: 100%; border-radius: 50%}
+.app-list .app-cell .app-a img{width: 100%}
+.app-list .app-cell .app-a-tit{display: block; width: 100%; height: 30px; line-height: 30px; padding: 3% 0; font-size: 1.0rem; color: #111; text-align: center}
+#list .app-a-1{background:#ff7f00}
+#list .app-a-2{background:#b03060}
+#list .app-a-3{background:#ff9966}
+#list .app-a-4{background:#0099cc}
+#list .app-a-5{background:#cdad00}
+#list .app-a-6{background:#9f1df0}
+#list .app-a-7{background:#5bd51f}
+#list .app-a-8{background:#ff9966}
+#list .app-a-9{background:#0099cc}
+#list .app-a-10{background:#cdad00}
+#list .app-a-11{background:#9f1df0}
+#list .app-a-12{background:#5bd51f}
+
+/* mouse点击效果 */
+#list .app-a-1:hover{background:#fc932b}
+#list .app-a-2:hover{background:#ca5c85}
+#list .app-a-3:hover{background:#fbb18c}
+#list .app-a-4:hover{background:#3cadd2}
+#list .app-a-5:hover{background:#d0b420}
+#list .app-a-6:hover{background:#ac43ed}
+#list .app-a-7:hover{background:#79d74b}
+#list .app-a-8:hover{background:#ff9966}
+#list .app-a-9:hover{background:#0099cc}
+#list .app-a-10:hover{background:#cdad00}
+#list .app-a-11:hover{background:#9f1df0}
+#list .app-a-12:hover{background:#5bd51f}
+
+.app-info{background-color: #e8e8e8; width: 100%; height: auto; margin-top: 10px }
+.app-info .app-hide{position: relative; width: 96%; padding: 10px 2%;}
+.app-info .app-hide .jt{width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #e8e8e8; position: absolute; top: -10px; left: 14%}
+.app-info .app-info-a{display: block; float: left; width: 29%; height: 30px; line-height: 30px; color: #7b7b7b; font-size: .9rem; margin: 5px 0}
+.app-info .app-info-a i{float: right; margin-top:7px; width: 9px; height: 16px; background: url("../../images/png.png") no-repeat 0 0}
+.app-info .line{width: 1px; height: 24px; background: #d5d5d5; display: block; float: left; margin: 8px 3%}
+
+/* 新闻详细页查看 */
+.detail{width:96%; margin:0 auto}
+.detail-tit{padding:3% 0; border-bottom:1px solid #cfcfcf;}
+.detail-tit h2{font-size:1.0rem; font-weight:normal; color:#000; line-height:150%; padding-bottom:5px}
+.detail-tit p{font-size:.6rem; color:#999; line-height:150%}
+.detail-value{padding:10px 2%}
+.detail-value p{ line-height:150%; font-size:.8rem; color:#676a6c; margin-bottom:10px}
+.detail-value p img{display: block; width: 100%; margin: 10px 0}
+
+
+/* 更多服务 */
+.more-con{width: 95%; margin: 0 auto}
+.message-box{padding: 20px 0 5px}
+.message-box .box-a{width: 40%; height: 32px; line-height: 32px; background-color: #269800; color: #fff; font-family: '微软雅黑'; font-size: .9rem; border-radius: 8px; text-align: center}
+.more-con .more-cell{padding-bottom: 20px}
+.more-con .more-cell-tit{height: 35px; line-height: 35px; padding: 10px 0}
+.more-con .more-cell-tit h2{color: #0082ca; font-size: 1.0rem; width: 30%; float: left;}
+.more-con .more-cell-tit .search-a{width: 21px; height: 21px; background: url("../../images/png.png") no-repeat 0 -20px; display: block; float: right; margin-top: 10px; margin-right: 5px}
+.more-con .more-cell-tit .search-con{width:100%; position: relative;}
+.more-con .more-cell-tit .search-con .search-text{width: 80%; height: 30px; line-height: 30px; text-indent: 5px; border: 1px solid #ddd; border-radius: 5px; font-family: '微软雅黑'; font-size: .9rem}
+.more-con .more-cell-tit .search-con .search-btn{height: 30px; border: none; color: #f64d00; background:transparent; font-family: '微软雅黑'; font-size: 1rem;position: absolute;top: 5px; right: 0; padding:0 10px; z-index:9999}
+.more-cell-con{width: 96%; padding: 0 2% 15px; border: 1px solid #ddd; border-radius: 3px;}
+.more-cell-con li{line-height: 25px; padding: 10px 5px;border-bottom: 1px solid #dedede;font-size: .9rem;}
+.more-cell-con li a{font-size: 1.1rem; color: #333}
+.more-cell-con li a:hover{color: #0082ca}
+.more-cell-con li span{color: #999; font-size: 1.0rem; }
+.more-cell-con li span i{top: .5rem; position: relative; width: 30px; height: 25px; display: inline-block;}
+.more-cell-con li span i.dcl{background: url(../../images/dcl.png) no-repeat;}
+.more-cell-con li span i.ycl{background: url(../../images/ycl.png) no-repeat;}
+.more-cell-con li span i.yps{background: url(../../images/yps.png) no-repeat;}
+.more-cell-con .more-li a{display: block; padding: 0 5px; text-align: right}
+.more-cell-con .more-li a:hover{color: #0082ca}
+.more-cell-con .more-li a i{float: right; margin-top:5px; margin-left: 5px; width: 9px; height: 16px; background: url("../../images/png.png") no-repeat 0 0}
+
+/* 新书推荐 */
+.book-img{width: 38%; padding: 2%; border: 1px solid #ddd; border-radius: 5px; text-align: center}
+.book-img:hover{border-color:#0082ca}
+.book-img img{width: 100%}
+.book-info{width: 55%; font-size: .9rem;}
+
+.detail-li .book-img{width: 48%; padding: 1.5%; margin: 1% auto}
+.detail-li .book-info{width: 100%}
+.back{font-size: .8rem}
+
+/* 开馆时间 */
+.table-show{width: 100%;  border: 1px solid #eeece1; box-shadow: 1px 1px 1px #bbb;}
+.table-show th{text-align: center; height: 30px; border: 1px solid #eeece1; font-size: .7rem;}
+.table-show td{height: 30px; border: 1px solid #eeece1; padding: 1% 0; font-size: .7rem}
+.table-show td.td1{text-align: center}
+.table-show td.td2{padding-left: 2%; line-height: 20px}
+
+/* 办证指南 */
+.guide-con b{padding-left: 28px; font-size: .9rem; margin-bottom: 5px; margin-top: 10px; display: block}
+.guide-con p{text-indent: 28px; margin-bottom: 5px}
+
+/* 图书借还单 */
+.book-list{margin-bottom: 20px; margin-top:10px}
+.book-list .book-img{margin: 10px 3.5%}
+.book-list .book-name{display: block; padding: 2% 0}
+.book-list .renew-a{display: inline-block; width: 70%; height: 28px; line-height: 28px; border-radius: 5px; background-color: #0082ca; color: #fff; font-size: .8rem; margin: 1% 0 5px}
+.book-list .renew-a:hover{color: #fff; background-color: #0099cc}
+
+/* 电费查询 */
+.pay li{padding: 0 5px}
+.pay .cost-cell{width:94%; padding:3% 3%; border:1px solid #d2d4d3;border-radius: 5px;}
+.pay .cost-cell dt{width:30%;background: url("../../images/sq_dfcx_bg.gif") no-repeat; background-size: 100%}
+.pay .cost-cell dt img{width: 100%}
+.pay .cost-cell dd{ width:50%; margin-left: 10%}
+.pay .cost-cell dd b{color:#494848; padding-bottom:5px; display:inline-block; font-size: 1.0rem}
+.pay .cost-cell dd p{color:#989494; line-height:150%; padding-bottom:2%; font-size: .8rem}
+.pay .cost-cell dd a{width:30%; height:20px; line-height: 20px; font-size: .7rem; text-align: center; border-radius: 5px; display: inline-block; background-color:#fb7823;  margin-right:10px}
+.binded h2{font-size: .8rem}
+.binded .table-show td,.binded .table-show th{font-size: .6rem}
+.binded .jb-btn{width:90%; height:20px; line-height: 20px; font-size: .6rem; text-align: center; border-radius: 5px; display: inline-block; background-color:#fb7823; border: 0; cursor: pointer}
+
+.bind-con{width: 96%; padding: 0 2% 15px; border: 1px solid #ddd; border-radius: 5px; margin: 3% 0}
+.bind-con .userCell{padding:10px 0}
+.userCell .userName{width:35%; height:25px; line-height:25px; text-align:right; display:inline-block; color:#363636; padding-right:1%}
+.bind-con .userCell .userText{width:50%;height:25px; line-height:25px; vertical-align:middle; border:1px solid #c6c6c6; padding-left:1%;}
+.bind-con .userCell label input{position:relative; top:2px; *top:0; margin-right:5px}
+.bind-con .bind-btn{width:51%; height:30px; line-height:30px; cursor:pointer; border:none; background-color: #0082ca; font-size: .9rem; border-radius: 5px }
+.bill-con{margin: 3% 0}
+
+/* 来信总数-150728 */
+.message-div{height:30px;line-height:30px}
+.message-div p{width:40%; text-align:center; font-size:.9rem}
+.message-div p label{color:#269800;}
+.message-deng{margin-top:10px}
+.message-deng span{color:#0091e2;font-size:1.0rem}
+.questionDetail .quesTitle{  border-bottom: 1px dotted #b9b9b9; line-height: 25px;  padding: 5px 5px;  margin: 5px 0;font-size:.9rem}
+.questionDetail .ques { line-height: 23px; text-indent:20px;  margin: 0 5px; overflow: hidden; zoom: 1;  display: block; font-size:.9rem}
+
+@media screen and (min-width: 480px) {
+	.detail-tit{padding:2% 0}
+	.detail-tit h2{font-size:1.4rem;}
+    .detail-value p{font-size:1.0rem;}
+    .message-box .box-a{height: 40px; line-height: 40px; font-size: 1.0rem}
+    .message-div p{font-size:1.0rem}
+	.message-deng span{font-size:1.1rem}
+	.questionDetail .quesTitle{font-size:1.0rem}
+	.questionDetail .ques { font-size:1.0rem}
+    .pay .cost-cell dd a{height: 28px; line-height: 28px}
+    .binded .jb-btn{height: 28px}
+}
+
+
+
+/* 问卷调查-151022 */
+.book-list .dc-cell{width: 94%; padding: 3%; background-color: #f1f1f1; margin: 5px 0 10px}
+.dc-cell .wjdc-info{width: 100%}
+.wjdc-info a.wjdc-tit{font-size: .9rem; text-align: left; display: block; padding: .5% 0 }
+.wjdc-info p{ font-size:.8rem; color: #666; text-align: left; }
+.wjdc-info .wjdc-a1,.wjdc-info .wjdc-a2{ font-size:.8rem; width: 30%; height: 30px;line-height: 30px; color:#fff; border-radius: 4px; display: inline-block; background: #0082ca;margin-right: 5%;margin-top: 1%;}
+.wjdc-info .wjdc-a2{background: #269900;}
+.wjdc-info .wjdc-a1:hover,.wjdc-info .wjdc-a2:hover{color: #fff; text-decoration: underline}
+
+.dc-cell-list{border-bottom: 1px dotted #ddd; width: 99%; padding:.5%;}
+.dc-cell-list .wjdc-tit{font-size: .8rem; display: inline-block; width: 78%; overflow: hidden;}
+.dc-cell-list .fr{width: 20%; text-align: right; margin-top: .5%;}
+.dc-cell-list .wjdc-a1,.dc-cell-list .wjdc-a2{font-size: .7rem; width: 97%; background-color: #e2e2e2; color: #0082ca;  display: inline-block; border-radius: 4px; text-align: center}
+
+.dc-cell-info{}
+.dc-cell-info .dc-cell-info-tit{border-bottom: 1px dotted #ddd; width: 98%; padding: 1%; }
+.dc-cell-info .dc-cell-info-tit h2{font-weight: normal; font-size: 1.0rem; text-align: center; padding-bottom: 2%}
+.dc-cell-info .dc-cell-info-tit p{font-size: .9rem; line-height: 180%; text-indent: 1.4rem; color: #222}
+.dc-cell-info .dc-cell-info-tit p.p-t{text-indent: 0}
+.dc-cell-info .survey-cell{border-bottom: 1px solid #ddd;  padding: 2%;}
+.dc-cell-info .survey-cell b{font-size: .9rem; color: #000}
+.dc-cell-info .survey-cell ul{  padding-left: 1.0rem;}
+.dc-cell-info .survey-cell ul li{border-bottom: 0; font-size: .9rem; line-height: 200%; padding: 0}
+.survey-reslut a.wjdc-a1{ font-size:.8rem; width: 30%; height: 30px;line-height: 30px; color:#fff; border-radius: 4px; display: inline-block; background: #0082ca;margin-top: 5%;}
+.survey-reslut a.wjdc-a1:hover{color: #fff; text-decoration: underline}
+.survey-reslut a.wjdc-a2{font-size: .7rem; color: #666}
+
+.pos{margin:10px 0; line-height:200%; font-size:.9rem}
+.pos input{margin:0 3px; height:20px; border:1px solid #ccc; border-radius:3px; padding-left:1%; color:#000}
+
+.survey-cell .reslut-p{width: 99%; margin-left: 1%}
+.survey-cell .reslut-p p{width: 80%; height: 10px; background-color: #eee; border: 1px solid #ddd; border-radius: 6px; margin-top: 8px}
+.survey-cell .reslut-p p span{background-color: #0082ca; height: 10px; border-radius: 5px; display: block}
+
+@media screen and (min-width: 480px) {
+	.detail-tit{padding:2% 0}
+	.detail-tit h2{font-size:1.4rem;}
+    .detail-value p{font-size:1.0rem;}
+    .message-box .box-a{height: 40px; line-height: 40px; font-size: 1.0rem}
+    .pay .cost-cell dd a{height: 28px; line-height: 28px}
+    .binded .jb-btn{height: 28px}
+
+    .wjdc-info a.wjdc-tit{font-size: 1.1rem; padding: 1% 0 }
+    .wjdc-info p{ font-size:1.0rem;}
+    .wjdc-info .wjdc-a1,.wjdc-info .wjdc-a2{ font-size:1.0rem; height: 35px; line-height: 35px}
+    .dc-cell-list .wjdc-tit{font-size: 1.0rem;}
+    .dc-cell-list .wjdc-a1,.dc-cell-list .wjdc-a2{font-size: .9rem;}
+
+    .dc-cell-info .dc-cell-info-tit h2{font-size: 1.2rem}
+    .dc-cell-info .dc-cell-info-tit p{font-size: 1.1rem; text-indent: 1.6rem}
+    .dc-cell-info .survey-cell b{font-size: 1.0rem;}
+    .dc-cell-info .survey-cell ul{  padding-left: 1.1rem;}
+    .dc-cell-info .survey-cell ul li{font-size: 1.0rem;}
+    .survey-reslut a.wjdc-a1{ font-size:1.0rem; height: 35px; line-height: 35px}
+    .survey-reslut a.wjdc-a2{font-size: .9rem}
+    .pos{font-size:1.0rem}
+
+
+}

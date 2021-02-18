@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<!-- ========================= Spring的配置 ========================= -->
+	<!-- 使Spring关注Annotation 启动注解功能-->
+	<context:annotation-config/>
+
+	<!-- 通过配置织入@Aspectj切面  -->
+	<aop:aspectj-autoproxy />
+
+	<!-- 让Spring通过自动扫描来查询和管理Bean,并检查@Required,@Autowired的属性已被注入
+			这样配置之后,就省去了DAO层和Service层等配置代码.会让代码变得容易管理	 -->
+	<context:component-scan base-package="com.sunsharing.party"/>
+	<!--日志包是ihom下面-->
+	<context:component-scan base-package="com.sunsharing.ihome"/>
+
+	<!-- ======================== 数据源的配置 ========================= -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="autoCommitOnClose" value="true"/>
+		<property name="checkoutTimeout" value="${cpool.checkoutTimeout}"/>
+		<property name="initialPoolSize" value="${cpool.minPoolSize}"/>
+		<property name="minPoolSize" value="${cpool.minPoolSize}"/>
+		<property name="maxPoolSize" value="${cpool.maxPoolSize}"/>
+		<property name="maxIdleTime" value="${cpool.maxIdleTime}"/>
+		<property name="acquireIncrement" value="${cpool.acquireIncrement}"/>
+		<property name="maxIdleTimeExcessConnections" value="${cpool.maxIdleTimeExcessConnections}"/>
+		<property name="idleConnectionTestPeriod" value="${cpool.idleConnectionTestPeriod}"/>
+		<property name="acquireRetryAttempts" value="${cpool.acquireRetryAttempts}"/>
+		<property name="acquireRetryDelay" value="${cpool.acquireRetryDelay}"/>
+		<property name="breakAfterAcquireFailure" value="${cpool.breakAfterAcquireFailure}"/>
+	</bean>
+	<!-- 教育基础库数据源 -->
+	<bean id="jydataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jy.jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jy.jdbc.url}" />
+		<property name="user" value="${jy.jdbc.username}" />
+		<property name="password" value="${jy.jdbc.password}" />
+		<property name="autoCommitOnClose" value="true"/>
+		<property name="checkoutTimeout" value="${cpool.checkoutTimeout}"/>
+		<property name="initialPoolSize" value="${cpool.minPoolSize}"/>
+		<property name="minPoolSize" value="${cpool.minPoolSize}"/>
+		<property name="maxPoolSize" value="${cpool.maxPoolSize}"/>
+		<property name="maxIdleTime" value="${cpool.maxIdleTime}"/>
+		<property name="acquireIncrement" value="${cpool.acquireIncrement}"/>
+		<property name="maxIdleTimeExcessConnections" value="${cpool.maxIdleTimeExcessConnections}"/>
+		<property name="idleConnectionTestPeriod" value="${cpool.idleConnectionTestPeriod}"/>
+		<property name="acquireRetryAttempts" value="${cpool.acquireRetryAttempts}"/>
+		<property name="acquireRetryDelay" value="${cpool.acquireRetryDelay}"/>
+		<property name="breakAfterAcquireFailure" value="${cpool.breakAfterAcquireFailure}"/>
+	</bean>
+	<bean id="dataSourceSQ" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${sqjdbc.driverClassName}"/>
+		<property name="jdbcUrl" value="${sqjdbc.url}" />
+		<property name="user" value="${sqjdbc.username}" />
+		<property name="password" value="${sqjdbc.password}" />
+		<property name="autoCommitOnClose" value="true"/>
+		<property name="checkoutTimeout" value="${cpool.checkoutTimeout}"/>
+		<property name="initialPoolSize" value="${sqcpool.minPoolSize}"/>
+		<property name="minPoolSize" value="${sqcpool.minPoolSize}"/>
+		<property name="maxPoolSize" value="${sqcpool.maxPoolSize}"/>
+		<property name="maxIdleTime" value="${sqcpool.maxIdleTime}"/>
+		<property name="acquireIncrement" value="${sqcpool.acquireIncrement}"/>
+		<property name="maxIdleTimeExcessConnections" value="${cpool.maxIdleTimeExcessConnections}"/>
+		<property name="idleConnectionTestPeriod" value="${cpool.idleConnectionTestPeriod}"/>
+		<property name="acquireRetryAttempts" value="${cpool.acquireRetryAttempts}"/>
+		<property name="acquireRetryDelay" value="${cpool.acquireRetryDelay}"/>
+		<property name="breakAfterAcquireFailure" value="${cpool.breakAfterAcquireFailure}"/>
+	</bean>
+	<bean id="dataSourceMS" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${msjdbc.driverClassName}"/>
+		<property name="jdbcUrl" value="${msjdbc.url}" />
+		<property name="user" value="${msjdbc.username}" />
+		<property name="password" value="${msjdbc.password}" />
+		<property name="autoCommitOnClose" value="true"/>
+		<property name="checkoutTimeout" value="${cpool.checkoutTimeout}"/>
+		<property name="initialPoolSize" value="${mscpool.minPoolSize}"/>
+		<property name="minPoolSize" value="${mscpool.minPoolSize}"/>
+		<property name="maxPoolSize" value="${mscpool.maxPoolSize}"/>
+		<property name="maxIdleTime" value="${mscpool.maxIdleTime}"/>
+		<property name="acquireIncrement" value="${mscpool.acquireIncrement}"/>
+		<property name="maxIdleTimeExcessConnections" value="${cpool.maxIdleTimeExcessConnections}"/>
+		<property name="idleConnectionTestPeriod" value="${cpool.idleConnectionTestPeriod}"/>
+		<property name="acquireRetryAttempts" value="${cpool.acquireRetryAttempts}"/>
+		<property name="acquireRetryDelay" value="${cpool.acquireRetryDelay}"/>
+		<property name="breakAfterAcquireFailure" value="${cpool.breakAfterAcquireFailure}"/>
+	</bean>
+	<bean id="logdataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${log.jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${log.jdbc.url}" />
+		<property name="user" value="${log.jdbc.username}" />
+		<property name="password" value="${log.jdbc.password}" />
+		<property name="autoCommitOnClose" value="true"/>
+		<property name="checkoutTimeout" value="${cpool.checkoutTimeout}"/>
+		<property name="initialPoolSize" value="${cpool.minPoolSize}"/>
+		<property name="minPoolSize" value="${cpool.minPoolSize}"/>
+		<property name="maxPoolSize" value="${cpool.maxPoolSize}"/>
+		<property name="maxIdleTime" value="${cpool.maxIdleTime}"/>
+		<property name="acquireIncrement" value="${cpool.acquireIncrement}"/>
+		<property name="maxIdleTimeExcessConnections" value="${cpool.maxIdleTimeExcessConnections}"/>
+		<property name="idleConnectionTestPeriod" value="${cpool.idleConnectionTestPeriod}"/>
+		<property name="acquireRetryAttempts" value="${cpool.acquireRetryAttempts}"/>
+		<property name="acquireRetryDelay" value="${cpool.acquireRetryDelay}"/>
+		<property name="breakAfterAcquireFailure" value="${cpool.breakAfterAcquireFailure}"/>
+	</bean>
+<bean id="dataSourceEM" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${emjdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${emjdbc.url}" />
+		<property name="user" value="${emjdbc.username}" />
+		<property name="password" value="${emjdbc.password}" />
+		<property name="autoCommitOnClose" value="true"/>
+		<property name="checkoutTimeout" value="${cpool.checkoutTimeout}"/>
+		<property name="initialPoolSize" value="${emjdbc.minPoolSize}"/>
+		<property name="minPoolSize" value="${emjdbc.minPoolSize}"/>
+		<property name="maxPoolSize" value="${emjdbc.maxPoolSize}"/>
+		<property name="maxIdleTime" value="${cpool.maxIdleTime}"/>
+		<property name="acquireIncrement" value="${cpool.acquireIncrement}"/>
+		<property name="maxIdleTimeExcessConnections" value="${cpool.maxIdleTimeExcessConnections}"/>
+		<property name="idleConnectionTestPeriod" value="${cpool.idleConnectionTestPeriod}"/>
+		<property name="acquireRetryAttempts" value="${cpool.acquireRetryAttempts}"/>
+		<property name="acquireRetryDelay" value="${cpool.acquireRetryDelay}"/>
+		<property name="breakAfterAcquireFailure" value="${cpool.breakAfterAcquireFailure}"/>
+	</bean>
+	<bean id="dataSourcePartyTwo" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${partytwojdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${partytwojdbc.url}" />
+		<property name="user" value="${partytwojdbc.username}" />
+		<property name="password" value="${partytwojdbc.password}" />
+		<property name="autoCommitOnClose" value="true"/>
+		<property name="checkoutTimeout" value="${cpool.checkoutTimeout}"/>
+		<property name="initialPoolSize" value="${partytwocpool.minPoolSize}"/>
+		<property name="minPoolSize" value="${partytwocpool.minPoolSize}"/>
+		<property name="maxPoolSize" value="${partytwocpool.maxPoolSize}"/>
+		<property name="maxIdleTime" value="${partytwocpool.maxIdleTime}"/>
+		<property name="acquireIncrement" value="${partytwocpool.acquireIncrement}"/>
+		<property name="maxIdleTimeExcessConnections" value="${cpool.maxIdleTimeExcessConnections}"/>
+		<property name="idleConnectionTestPeriod" value="${cpool.idleConnectionTestPeriod}"/>
+		<property name="acquireRetryAttempts" value="${cpool.acquireRetryAttempts}"/>
+		<property name="acquireRetryDelay" value="${cpool.acquireRetryDelay}"/>
+		<property name="breakAfterAcquireFailure" value="${cpool.breakAfterAcquireFailure}"/>
+	</bean>
+	<!-- 添加jdbcTemplate -->
+	<bean id="partyTwoTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSourcePartyTwo" />
+	</bean>
+	<bean id="emjdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSourceEM" />
+    </bean>
+	<bean id="jdbcTemplate"
+		  class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	<bean id="sqjdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSourceSQ" />
+	</bean>
+	<bean id="msjdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSourceMS" />
+	</bean>
+	<bean id="jyjdbcTemplate"
+		  class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="jydataSource"/>
+	</bean>
+
+	<!-- 日志配置jdbcTemplate -->
+	<bean id="logjdbcTemplate"
+		  class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="logdataSource"/>
+	</bean>
+
+	<!-- ========================= Hibernate 的SessionFactory类的配置,包含是否打印SQL语句等信息 ========================= -->
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceEM" />
+		<property name="namingStrategy">
+			<bean class="org.hibernate.cfg.ImprovedNamingStrategy" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<!--<prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>-->
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.jdbc.batch_size">0</prop>
+			</props>
+		</property>
+		<!-- 表与实体类的映射 -->
+		<property name="packagesToScan">
+			<list>
+				<value>com.sunsharing.party.model</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- =========================Spring中用Hibernate处理事务的配置========================= -->
+	<!-- 使用annotation定义事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+
+	<!-- 事务配置 Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
+	<!-- Hibernate 与spring jdbcTemplate共享事物的管理 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+</beans> 

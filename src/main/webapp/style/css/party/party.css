@@ -1,0 +1,336 @@
+@charset "UTF-8";
+body, html {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff; }
+
+textarea {
+  font-family: -apple-system-font,Helvetica Neue,sans-serif; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+ul, li, dl, dt, dd {
+  list-style: none; }
+
+.mt0 {
+  margin-top: 0 !important; }
+
+.mb0 {
+  margin-bottom: 0 !important; }
+
+.mt10 {
+  margin-top: 10px !important; }
+
+.mb10 {
+  margin-bottom: 10px !important; }
+
+.m10 {
+  margin: 10px; }
+
+.p0 {
+  padding: 0 !important; }
+
+.pt0 {
+  padding-top: 0 !important; }
+
+.pb0 {
+  padding-bottom: 0 !important; }
+
+.pt2 {
+  padding-top: 2px !important; }
+
+.pb2 {
+  padding-bottom: 2px !important; }
+
+.bt0 {
+  border-top: none !important; }
+
+.bb0 {
+  border-bottom: none !important; }
+
+.cblue {
+  color: #267ec8 !important; }
+
+.c999 {
+  color: #999 !important; }
+
+.c666 {
+  color: #666 !important; }
+
+.c333 {
+  color: #333 !important; }
+
+.cfff {
+  color: #fff !important; }
+
+.f18 {
+  font-size: 18px !important; }
+
+.f15 {
+  font-size: 15px !important; }
+
+.f16 {
+  font-size: 16px !important; }
+
+.fblod {
+  font-weight: bold !important; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.none {
+  display: none; }
+
+.tcenter {
+  text-align: center; }
+
+.background-gray {
+  background-color: #e8e8e8 !important; }
+
+/* 党建项目 -180105*/
+.party-menu {
+  padding: 10px 0; }
+
+/***** 社区简介 *****/
+.banner-article {
+  position: relative; }
+  .banner-article .banner-title {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    padding: 3px 30px;
+    font-size: 26px; }
+
+.sq-tab {
+  padding: 15px;
+  border-bottom: 1px solid #ddd; }
+  .sq-tab .weui-btn + .weui-btn {
+    margin-left: 5%;
+    margin-top: 0; }
+  .sq-tab .weui-btn_default {
+    background-color: #b5b1b1; }
+  .sq-tab .cur {
+    color: #fff;
+    background-color: #f64d00 !important; }
+
+.sq-peoples .weui-cell .weui-cell__hd {
+  position: relative;
+  margin-right: 20px; }
+  .sq-peoples .weui-cell .weui-cell__hd img {
+    width: 100px;
+    height: 120px;
+    display: block; }
+
+/* 居民问题反映 */
+textarea, .flex-text-wrap pre {
+  min-height: 200px; }
+
+.btn-con {
+  padding: 15px; }
+  .btn-con .weui-btn + .weui-btn {
+    margin-top: 0; }
+  .btn-con .w-precent-30 {
+    display: inline-block;
+    width: 30% !important; }
+    .btn-con .w-precent-30 + .w-precent-30 {
+      margin-left: 3%; }
+  .btn-con .w-precent-50 {
+    display: inline-block;
+    width: 47% !important; }
+    .btn-con .w-precent-50 + .w-precent-50 {
+      margin-left: 3%; }
+  .btn-con .weui-btn_primary {
+    background-color: #f64d00; }
+
+/* 问题列表 */
+.searchbar-result {
+  position: absolute;
+  top: 23px; }
+
+.question-list .weui-cell__hd img {
+  width: 23px;
+  margin-right: 5px;
+  display: block; }
+.question-list .weui-cell__bd p {
+  margin-right: 5px; }
+
+.list-title {
+  padding: 7px 10px; }
+  .list-title p {
+    color: #f58b0b; }
+
+.weui-loadmore {
+  margin-top: 0;
+  padding-top: 20px;
+  margin-bottom: 0; }
+
+/* 志愿者招募 */
+.join-con {
+  padding-bottom: 65px; }
+
+.we-join {
+  background-color: #e8e8e8;
+  padding: 15px 10px;
+  bottom: 0;
+  z-index: 99; }
+  .we-join .we-join-a {
+    width: 80%; }
+
+/* 便民服务中心 */
+.service-con {
+  padding-bottom: 77px; }
+  .service-con .weui-cells:first-child {
+    margin-top: 0; }
+  .service-con .weui-cells + .weui-cells {
+    margin-top: 10px; }
+  .service-con .status-service {
+    border-radius: 13px;
+    padding: 3px 13px; }
+    .service-con .status-service.status-service-slz {
+      background-color: #00ccff; }
+    .service-con .status-service.status-service-yjs {
+      background-color: #66cc66; }
+
+.apply-con {
+  padding-right: 0; }
+  .apply-con .weui-vcode-btn {
+    color: #f58b0b; }
+    .apply-con .weui-vcode-btn i {
+      margin-right: 5px; }
+
+.tab-info {
+  /*.edit-uploader{
+    .weui-uploader__bd{
+      position: relative;
+      .weui-uploader__files{
+        //text-align: center;
+        .weui-uploader__file{
+          width: 160px;
+          height: 135px;
+          //background: url("../images/normal-img.png") no-repeat;
+          background-size: cover;
+          border: 1px solid #d9d9d9;
+          margin: 0;
+          float: none;
+          display: inline-block;
+        }
+      }
+      .weui-uploader__input-box{
+        position: absolute;
+        width: 162px;
+        height: 137px;
+        border: none;
+        float: none;
+        top: 0;
+        left: 50%;
+        margin: 0 0 0 -81px;
+        &:before,&:after{
+          display: none;
+          width: 3px;
+          height: 39.5px;
+          background-color: #d9d9d9;
+        }
+        .weui-uploader__input{
+          width: 162px;
+          height: 137px;
+          background-color: green;
+          opacity: 0;
+        }
+      }
+    }
+    .weui-uploader__ft{
+      background-color: rgba(221,221,221,0.9);
+      width: 160px;
+      height: 27px;
+      line-height: 27px;
+      position: absolute;
+      bottom:13px;
+      left: 15px;
+      //margin-left: -76px;
+      border:1px solid #d9d9d9;
+      z-index: 9;
+      .weui-uploader__title{
+        font-size: 14px;
+        color: #666;
+        text-align: center;
+
+      }
+    }
+  }*/ }
+  .tab-info .weui-cells {
+    padding-bottom: 90px; }
+
+.help_dialog .weui-dialog__bd {
+  text-align: left;
+  line-height: 1.8; }
+.help_dialog .weui-dialog__bd {
+  padding: 0 1em 0.8em; }
+.help_dialog .weui-dialog__btn_primary {
+  color: #f64d00; }
+
+/* 问题列表-20180116改版 */
+.btn-fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; }
+
+.ques-con {
+  padding-bottom: 0;
+  padding-top: 76px; }
+  .ques-con .weui-cells {
+    margin-top: 0; }
+  .ques-con .item-title {
+    margin-bottom: 5px;
+    display: inline-block; }
+  .ques-con .status-service-i {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 998; }
+    .ques-con .status-service-i.status-service-i-start {
+      background: url("../../../images/icon/icon_start.png") no-repeat;
+      background-size: cover; }
+    .ques-con .status-service-i.status-service-i-end {
+      background: url("../../../images/icon/icon_end.png") no-repeat;
+      background-size: cover; }
+	.ques-con .status-service-i.status-service-i-nostart {
+      background: url("../../../images/icon/icon_nostart.png") no-repeat;
+      background-size: cover; }
+      
+/* 我的反映，所有反映 -180312 */
+.service-con-sub{
+	position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    width:100%;
+    padding-top:11px;
+}
+.service-con-sub span{
+	padding-left:15px;
+}
+.service-a{
+	display:inline-block;
+	margin-right:5px;
+	padding:5px 10px;
+	color:#333;
+	background:#fff;
+	border-bottom: 1px solid #40da3e;
+} 
+.service-a-on{
+	background:#09bb07;
+	color:#fff;
+}     
+      
+	
+/*# sourceMappingURL=party.css.map */

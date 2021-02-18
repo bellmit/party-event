@@ -1,0 +1,194 @@
+.BMap_stdMpCtrl div {
+	position: absolute
+}
+
+.BMap_stdMpZoom {
+	top: 45px;
+	overflow: hidden
+}
+
+.BMap_stdMpZoom .BMap_button {
+	width: 26px;
+	height: 24px;
+	left: 30px;
+	overflow: hidden;
+	background-image: url(standard2.png);
+	background-repeat: no-repeat;
+	z-index: 10
+}
+
+.BMap_ie6 .BMap_stdMpZoom .BMap_button {
+	background: 0 0
+}
+
+.BMap_stdMpZoomIn {
+	background-position: 0 0
+}
+
+.BMap_stdMpZoomOut {
+	background-position: 0 -204px;
+	height: 23px
+}
+
+.BMap_ie6 .BMap_stdMpZoomIn div {
+	left: 0;
+	top: 0
+}
+
+.BMap_ie6 .BMap_stdMpZoomOut div {
+	left: 0;
+	top: -204px
+}
+
+.BMap_stdMpSlider {
+	width: 26px;
+	top: 24px;
+	left: 30px;
+	overflow: hidden
+}
+
+.BMap_stdMpSliderBgTop {
+	left: 0;
+	width: 26px;
+	overflow: hidden;
+	background: url(standard2.png) no-repeat 0 -24px
+}
+
+.BMap_stdMpSliderBgBot {
+	left: 11px;
+	height: 1px;
+	width: 4px;
+	bottom: 10px;
+	overflow: hidden;
+	background: url(standard2.png) no-repeat -53px 0
+}
+
+.BMap_ie6 .BMap_stdMpSliderBgTop,.BMap_ie6 .BMap_stdMpSliderBgBot {
+	background: 0 0
+}
+
+.BMap_ie6 .BMap_stdMpSliderBgTop div {
+	left: 0;
+	top: -24px
+}
+
+.BMap_ie6 .BMap_stdMpSliderBgBot div {
+	left: -53px;
+	top: 0
+}
+
+.BMap_stdMpSliderMask {
+	height: 100%;
+	width: 26px;
+	left: 0;
+	cursor: pointer
+}
+
+.BMap_stdMpSliderBar {
+	height: 11px;
+	width: 20px;
+	left: 3px;
+	top: 80px;
+	overflow: hidden;
+	background: url(standard2.png) no-repeat -26px -68px
+}
+
+.BMap_ie6 .BMap_stdMpSliderBar,.BMap_ie6 .BMap_stdMpSliderBar.h {
+	background: 0 0
+}
+
+.BMap_ie6 .BMap_stdMpSliderBar div {
+	left: -26px;
+	top: -68px
+}
+
+.BMap_zlSt,.BMap_zlCity,.BMap_zlProv,.BMap_zlCountry,.BMap_zlSq,.BMap_zlQu {
+	position: absolute;
+	left: 0;
+	height: 17px;
+	width: 27px;
+	background-image: url(standard2.png);
+	background-repeat: no-repeat;
+	font-size: 0;
+	cursor: pointer
+}
+
+.BMap_ie6 .BMap_zlSt,.BMap_ie6 .BMap_zlCity,.BMap_ie6 .BMap_zlProv,.BMap_ie6 .BMap_zlCountry
+	{
+	background: 0 0;
+	overflow: hidden
+}
+
+.BMap_zlHolder {
+	display: none;
+	position: absolute;
+	top: 0
+}
+
+.BMap_zlHolder.hvr {
+	display: block
+}
+
+.BMap_zlSt {
+	background-position: -26px 0;
+	top: 45px
+}
+
+.BMap_zlSq {
+	background-position: -26px -97px;
+	top: 25px
+}
+
+.BMap_zlQu {
+	background-position: -26px -80px;
+	top: 75px
+}
+
+.BMap_zlCity {
+	background-position: -26px -17px;
+	top: 95px
+}
+
+.BMap_zlProv {
+	background-position: -26px -34px;
+	top: 135px
+}
+
+.BMap_zlCountry {
+	background-position: -26px -51px;
+	top: 175px
+}
+
+.BMap_ie6 .BMap_zlSt div {
+	left: -26px;
+	top: 0
+}
+
+.BMap_ie6 .BMap_zlCity div {
+	left: -26px;
+	top: -17px
+}
+
+.BMap_ie6 .BMap_zlProv div {
+	left: -26px;
+	top: -34px
+}
+
+.BMap_ie6 .BMap_zlCountry div {
+	left: -26px;
+	top: -51px
+}
+
+.BMap_stdMpType1 .BMap_stdMpSlider,.BMap_stdMpType2 .BMap_stdMpSlider,.BMap_stdMpType3 .BMap_stdMpSlider,.BMap_stdMpType2 .BMap_stdMpZoom
+	{
+	display: none
+}
+
+.BMap_stdMpType0 .BMap_stdMpZoom,.BMap_stdMpType1 .BMap_stdMpZoom,.BMap_stdMpType4 .BMap_stdMpZoom,.BMap_stdMpType3 .BMap_stdMpZoom
+	{
+	top: 0
+}
+
+.BMap_stdMpType4 .BMap_stdMpSlider {
+	top: -156px
+}

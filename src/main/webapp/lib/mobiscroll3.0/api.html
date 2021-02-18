@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        var MS = MS || {};
+    </script>
+
+
+    <meta charset="utf-8"/>
+    <meta name="description" content="Mobiscroll 3.0.0 developer documentation for mobiscroll"/>
+    <meta name="author" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <meta name="theme-color" content="#2682CE">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="p:domain_verify" content="6eda7ad91057c1bfd4b436549ac6bd33"/>
+
+    <title>Mobiscroll 3.0</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#2682ce">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#2682ce">
+
+
+    <script type="text/javascript">
+        var MS = MS || {};
+        MS.mobile = false;
+        MS.mixPanelKey = "704e5f530a948715b87db4b1c9fe9a57";
+        MS.GA = "UA-2009735-10";
+        MS.FBAppID = "306273539474640";
+        MS.baseUrl = "mobiscroll.com";
+        MS.trialUrl = "https://trial.mobiscroll.com/";
+        MS.disableExternal = false;
+        MS.disableSocial = true;
+    </script>
+
+
+    <script src="https://docs.mobiscroll.com/Scripts/beta?v=riD8IzeisIla7rPEBSVd63533xzhgNIu-qFYWFG1Dqw1"></script>
+
+    <link href="https://docs.mobiscroll.com/Content/beta?v=4NJFmr1kx3h3ep3VhgSykJJ3QMSaPgcwa0nTpxvttAw1" rel="stylesheet"/>
+
+
+    <link href="https://docs.mobiscroll.com/Content/docs?v=i3Lx-_7qfssdpP2o4Gg72TMugiTpovl9MMmPNaRKCCI1" rel="stylesheet"/>
+
+    <script src="https://docs.mobiscroll.com/Scripts/docs?v=x2rBxU3ue0CHV0JukxY3YWOphYM9HR53jAWKerjFBNM1"></script>
+
+
+    <script src="https://cdn.optimizely.com/js/225406928.js"></script>
+
+
+    <script type="text/javascript" src="https://use.typekit.net/xdb8dcb.js"></script>
+    <script type="text/javascript">
+        // Mobiscroll Remote API URL
+        //if (mobiscroll) {
+        //mobiscroll.apiUrl = 'https://trial.mobiscroll.com/';
+        //}
+
+        // Typekit
+        try {
+            Typekit.load();
+        } catch (e) {
+        }
+
+        // Mixpanel
+        var mixpanelTries = 0;
+        function validateMixpanelUser(set, resp) {
+            if (resp !== 1) {
+                message += "Response is " + resp + " instead of 1 ";
+            }
+            if (!!(set)) {
+                if (!set.$email) {
+                    message += "Email was not set correctly ";
+                }
+                else if (set.$email !== "") {
+                    message += "Email is " + set.$email + " instead of " + "" + " ";
+                }
+                if (!set.$created) {
+                    message += "Created is not set correctly ";
+                }
+                else if (set.$created !== "") {
+                    message += "Created is " + set.$created + " instead of " + "" + " ";
+                }
+                if (!set.name) {
+                    message += "Name is not set correctly ";
+                }
+                else if (set.name !== " ") {
+                    message += "Name is " + set.name + " instead of " + " " + " ";
+                }
+            }
+            else {
+                message += "Person is not set correctly ";
+            }
+            return (message) ? (message) : (true);
+        }
+
+        var message = "";
+
+        function logMixpanelError() {
+            var url = "//" + "mobiscroll.com" + "/logmixpanelerror/" + "0";
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: message,
+                async: true
+            });
+        }
+
+        function mixpanelValidation(set, response) {
+            try {
+                var url = "//" + "mobiscroll.com" + "/finalizeuser/" + "0";
+                var validationResponse = validateMixpanelUser(set, response);
+                if (validationResponse === true) {
+                    $.ajax({
+                        type: 'POST',
+                        url: url,
+                        async: false
+                    });
+                }
+                else {
+                    message = validationResponse;
+                    logMixpanelError();
+                }
+            }
+            catch (exception) {
+                message += " An exception occurred ";
+                logMixpanelError();
+            }
+        }
+
+        function handleMixpanelUser() {
+            if ((window.MixPanel) && (window.MixPanel.alias)) {
+                if ((isNaN(parseInt("0")) == false) && (parseInt("0") != 0)) {
+                    if ("False" === "False") {
+                        var response;
+                        try {
+                            MixPanel.alias("0");
+                        } catch (exception) {
+                        }
+                        try {
+                            MixPanel.identify("0");
+                            var set = MixPanel.people.set({
+                                "$email": "",    // only special properties need the $
+                                "$created": "",
+                                "name": " ",
+                                "subscribed": "true"
+                            }, function (resp) {
+                                mixpanelValidation(set, resp);
+                            }).$set;
+                        }
+                        catch (exception) {
+                            message += " An exception occurred ";
+                            logMixpanelError();
+                        }
+                    }
+                    else {
+                        MixPanel.identify("0");
+                    }
+                }
+            }
+            else {
+                if (mixpanelTries < 5) {
+                    mixpanelTries++;
+                    setTimeout(handleMixpanelUser, 100);
+                }
+            }
+        }
+
+        $(function () {
+            handleMixpanelUser();
+        });
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1484090305226072');
+        fbq('track', "PageView");</script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=1484090305226072&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+</head>
+
+<body class="badass ">
+<div class="wrapper" data-enhance="false">
+    <div id="master-overlay" class="overlay hidden"></div>
+    <div id="fb-root"></div>
+    <div id="header" class="header">
+
+
+        <div class="container_12 menu-c clearfix">
+
+            <a href="//mobiscroll.com" id="logo" class="header-logo"></a>
+            <div class="grey-trial header-trial no-validation-message header-start-trial">
+
+                <form id="285512" class="trial-starter-container" action="/trialstarter" novalidate="true"
+                      method="post">
+                    <input type="email" name="Email" required class="trial-starter-half trial-starter-input"
+                           placeholder="Enter your email"/>
+                    <input type="hidden" name="Page" value="Global-Header"/>
+                    <input type="hidden" name="Origin" value="Header"/>
+                    <input type="hidden" name="Product" value=""/>
+                    <input type="hidden" name="Framework" value=""/>
+
+                    <button type="submit"
+                            class="trial-starter-half trial-starter-submit-btn gen-btn gen-btn-primary gen-btn-filled">
+                        <span class="submit-txt">Get Started</span>
+                        <div class="loader">
+                            <svg class="circular" viewBox="25 25 50 50">
+                                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2"
+                                        stroke-miterlimit="10"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="clear clearfix"></div>
+                    <div class="input-validation-cont"></div>
+
+                </form>
+
+                <script>
+                    $(function () {
+                        var form = $('#285512');
+                        form.removeData("validator");
+                        form.removeData("unobtrusiveValidation");
+                        form.keydown(function (ev) {
+                                if (ev.keyCode == 13 || ev.keyCode == 27) {
+                                    ev.stopPropagation();
+                                }
+                            })
+                            .submit(function (e) {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                if (form.valid()) {
+                                    setSubmit(false);
+                                    $.ajax({
+                                        url: form.attr('action'),
+                                        type: 'POST',
+                                        data: form.serialize(),
+                                        success: function (response) {
+                                            if (response.success == true) {
+                                                window.location.href = response.redirectUrl;
+                                            }
+                                            else if (response.errorMessage) {
+                                                form.find('.trial-starter-input').addClass('input-validation-message');
+                                                var error = $('<div class="input-validation-message">' + response.errorMessage + '</div>');
+                                                form.find('.input-validation-cont').append(error);
+                                                setSubmit(true);
+                                            } else {
+                                                window.location.href = response.redirectUrl;
+                                            }
+                                        },
+                                        error: function () {
+                                            setSubmit(true);
+                                        }
+                                    });
+                                }
+                                return false;
+                            }).validate({
+                            onkeyup: false,
+                            rules: {
+                                email: {
+                                    required: true,
+                                    email: true,
+                                    regex: /^[a-zA-Z0-9\.\+\/_-]+@((?!((trbvm)|(sharklasers)|(wegwerfemail)|(mintemail)|(grr)|(tempinbox)|(guerrillamail)|(yopmail)|(byom)|(objectmail)|(kurzepost)|(proxymail)|(rcpt)|(trash-mail)|(trashmail)|(wegwerfmail)|(spamgourmet)|(guerrillamailblock)|(spam4)|(tafmail)|(imgof)|(vomoto)|(mailinator)|(bobmail)|(pwrby)|(dingbone)|(fudgerub)|(lookugly)|(smellfear))\.))([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,4}$/
+                                }
+                            },
+                            messages: {
+                                email: {
+                                    required: 'Email address required',
+                                    email: "Email address is not in the correct format, try something like 'you@yours.com'",
+                                    regex: "Email address is not in the correct format, try something like 'you@yours.com'"
+                                }
+                            },
+                            errorPlacement: function (error, element) {
+                                form.find('.input-validation-cont')
+                                    //.removeClass('')
+                                    .append(error);
+                            },
+                            errorElement: 'div',
+                            errorClass: 'input-validation-message'
+                        });
+
+
+                        function busy(business) {
+                            if (business) {
+                                form.find('.submit-txt').hide();
+                                form.find('.loader').addClass('loading');
+                            } else {
+                                form.find('.submit-txt').show();
+                                form.find('.loader').removeClass('loading');
+                            }
+                        }
+
+                        function setSubmit(enabled) {
+                            if (enabled) {
+                                form.find('.trial-starter-submit').removeAttr('disabled');
+                                busy(false);
+                            } else {
+                                busy(true);
+                                form.find('.trial-starter-submit').attr('disabled', 'disabled');
+                            }
+
+                        }
+                    });
+                </script>
+
+            </div>
+            <div data-popover="popover-menu" data-tap-only="true" data-full-width="true" class="nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div id="menu" class="menu header-menu">
+                <a data-popover="popover-components" href="#" class="mi">products&nbsp;&nbsp;<span
+                    class="micons icon-ion-arrow-down-b"></span></a>
+                <a href="//mobiscroll.com/pricing" class="mi ">pricing</a>
+                <a data-popover="popover-resources" href="#" class="mi">resources&nbsp;&nbsp;<span
+                    class="micons icon-ion-arrow-down-b"></span></a>
+                <a href="//demo.mobiscroll.com" class="mi ">demos</a>
+                <a href="//mobiscroll.com/support" class="mi active">learning</a>
+                <a href="//mobiscroll.com/login" class="mi " style="text-transform: none;">Sign In</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div id="popover-menu" class="gen-popover" style="display:none;">
+            <div class="nav-menu">
+                <p>Products</p>
+                <a href="//mobiscroll.com">Framework</a>
+                <a href="//mobiscroll.com/angular">UI for Angular</a>
+                <a href="//mobiscroll.com/react">UI for React</a>
+                <a href="//mobiscroll.com/ember">UI for Ember</a>
+                <a href="//mobiscroll.com/themebuilder">Theme Builder</a>
+            </div>
+            <div class="nav-menu">
+                <div class="nav-menu-col">
+                    <a href="//mobiscroll.com/pricing">Pricing</a>
+                    <a href="//demo.mobiscroll.com">Demos</a>
+                    <a href="//mobiscroll.com/company">About Us</a>
+                    <a href="//mobiscroll.com/customers">Customers</a>
+                </div>
+                <div class="nav-menu-col">
+                    <a href="http://uipatterns.io">Mobile Patterns</a>
+                    <a href="https://blog.mobiscroll.com">Blog</a>
+                    <a href="//mobiscroll.com/support">Support</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="popover-account" class="gen-popover" style="display:none;">
+            <div class="gen-popover-c">
+                <a href="//mobiscroll.com/account">Account</a>
+                <a href="//mobiscroll.com/logout">Sign out</a>
+            </div>
+        </div>
+
+        <div id="popover-components" class="gen-popover" style="display:none;">
+            <div class="gen-popover-row gen-popover-main gen-popover-learn">
+                <a href="//mobiscroll.com" class="gen-popover-col">
+                    <h2>Framework</h2>
+                    <p>The complete package for building mobile UI</p>
+                    <div class="gen-btn-cont">
+                        <div class="gen-btn gen-btn-filled gen-btn-default">Learn more</div>
+
+                    </div>
+                </a>
+                <a href="//mobiscroll.com/angular" class="gen-popover-col">
+                    <h2>UI for Angular</h2>
+                    <p>Build mobile apps and websites the angular way</p>
+                    <div class="gen-btn-cont">
+                        <div class="gen-btn gen-btn-filled gen-btn-default">Learn more</div>
+                    </div>
+                </a>
+                <a href="//mobiscroll.com/react" class="gen-popover-col">
+                    <h2>UI for React</h2>
+                    <p>Build mobile apps and websites the react way</p>
+                    <div class="gen-btn-cont">
+                        <div class="gen-btn gen-btn-filled gen-btn-default">Learn more</div>
+                    </div>
+                </a>
+                <a href="//mobiscroll.com/ember" class="gen-popover-col">
+                    <h2>UI for Ember</h2>
+                    <p>Build mobile apps and websites the ember way</p>
+                    <div class="gen-btn-cont">
+                        <div class="gen-btn gen-btn-filled gen-btn-default">Learn more</div>
+                    </div>
+                </a>
+            </div>
+            <div class="gen-popover-row gen-popover-sub gen-popover-main gen-popover-components">
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/responsive-calendar">Calendar</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/color-picker">Color</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/mobile-date-and-time-picker">Date & Time</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/eventcalendar">Event Calendar</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/forms">Forms</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/image">Image</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/listview">Listview</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/measurement">Measurement</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/menustrip">Menustrip</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/number">Number</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/numpad">Numpad</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/range">Range</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/rating">Rating</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="#">Scroller</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/select">Select</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="#">Treelist</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/timer">Timer</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/timespan">Timespan</a>
+                </div>
+                <div class="gen-popover-col">
+                    <a href="//mobiscroll.com/component/widget">Widget</a>
+                </div>
+            </div>
+            <div class="gen-popover-footer">
+                Customize the look & feel of your app with the Theme Builder. <a href="//mobiscroll.com/themebuilder">
+                Learn more </a>
+            </div>
+        </div>
+
+        <div id="popover-resources" class="gen-popover header-menu-resources" style="display: none;">
+            <div class="gen-popover-row gen-popover-main gen-popover-learn">
+                <a href="http://uipatterns.io" class="gen-popover-col gen-popover-col-5">
+                    <h2>Mobile UI Patterns</h2>
+                    <p>We are curating a mobile UI Pattern Library</p>
+                    <div class="gen-btn-cont">
+                        <div class="gen-btn gen-btn-filled gen-btn-default">Learn more</div>
+                    </div>
+                </a>
+                <a href="//docs.mobiscroll.com" class="gen-popover-col gen-popover-col-5">
+                    <h2>Docs</h2>
+                    <p>Learn how to build better products with Mobiscroll</p>
+                    <div class="gen-btn-cont">
+                        <div class="gen-btn gen-btn-filled gen-btn-default">Learn more</div>
+                    </div>
+                </a>
+                <a href="//mobiscroll.com/customers" class="gen-popover-col gen-popover-col-5">
+                    <h2>Customers</h2>
+                    <p>See who is already using and loving Mobiscroll</p>
+                    <div class="gen-btn-cont">
+                        <div class="gen-btn gen-btn-filled gen-btn-default">Learn more</div>
+                    </div>
+                </a>
+                <a href="https://blog.mobiscroll.com" class="gen-popover-col gen-popover-col-5">
+                    <h2>Blog</h2>
+                    <p>We write about design, business, usability</p>
+                    <div class="gen-btn-cont">
+                        <div class="gen-btn gen-btn-filled gen-btn-default">Learn more</div>
+                    </div>
+                </a>
+                <a href="//mobiscroll.com/company" class="gen-popover-col gen-popover-col-5">
+                    <h2>About Us</h2>
+                    <p>Who is behind<br>
+                        all this?</p>
+                    <div class="gen-btn-cont">
+                        <div class="gen-btn gen-btn-filled gen-btn-default">Learn more</div>
+                    </div>
+                </a>
+            </div>
+            <div class="gen-popover-footer">
+                Have any questions? Contact us at <a href="mailto:hello@mobiscroll.com">hello@mobiscroll.com</a> or <a
+                href="tel:+1 646-568-7851">+1 646-568-7851</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="page_title" class="page-header-title blue-bg" style="height: 7px;">
+    </div>
+
+    <div id="content" class="docs toolbar-container">
+
+
+        <div class="docs-toolbar toolbar-dropdown-cont affix-top" data-spy="affix">
+
+            <div class="docs-menu-button">Contents</div>
+
+            <div class="dropdown" style="">
+                <a id="docs-quicknav" href="#" data-toggle="dropdown" class="toolbar-dropdown-quicknav">Section: <span
+                    class="micons icon-ion-arrow-down-b"></span></a>
+                <div class="dropdown-menu toolbar-quicknav" aria-labelledby="docs-quicknav">
+                    <div class="toolbar-quicknav-col">
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery" class="toolbar-quicknav-item" data-name="General">General</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/calendar#usage" class="toolbar-quicknav-item"
+                           data-name="Calendar">Calendar</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/color#usage" class="toolbar-quicknav-item"
+                           data-name="Color">Color</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/datetime#usage" class="toolbar-quicknav-item"
+                           data-name="Date & Time">Date & Time</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/eventcalendar#usage" class="toolbar-quicknav-item"
+                           data-name="Event Calendar">Event Calendar</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#usage" class="toolbar-quicknav-item"
+                           data-name="Forms">Forms</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/image#usage" class="toolbar-quicknav-item"
+                           data-name="Image">Image</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/listview#usage" class="toolbar-quicknav-item"
+                           data-name="Listview">Listview</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/measurement#usage" class="toolbar-quicknav-item"
+                           data-name="Measurement">Measurement</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/menustrip#usage" class="toolbar-quicknav-item"
+                           data-name="Menustrip">Menustrip</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/number#usage" class="toolbar-quicknav-item"
+                           data-name="Number">Number</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/numpad#usage" class="toolbar-quicknav-item"
+                           data-name="Numpad">Numpad</a>
+                    </div>
+                    <div class="toolbar-quicknav-col">
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/range#usage" class="toolbar-quicknav-item"
+                           data-name="Range">Range</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/rating#usage" class="toolbar-quicknav-item"
+                           data-name="Rating">Rating</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/scroller#usage" class="toolbar-quicknav-item"
+                           data-name="Scroller">Scroller</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/select#usage" class="toolbar-quicknav-item"
+                           data-name="Select">Select</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/timer#usage" class="toolbar-quicknav-item"
+                           data-name="Timer">Timer</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/timespan#usage" class="toolbar-quicknav-item"
+                           data-name="Timespan">Timespan</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/list#usage" class="toolbar-quicknav-item"
+                           data-name="Treelist">Treelist</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/widget#usage" class="toolbar-quicknav-item"
+                           data-name="Widget">Widget</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/icons" class="toolbar-quicknav-item"
+                           data-name="Tools">Tools</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/accessibility#acc-section-508"
+                           class="toolbar-quicknav-item" data-name="Accessibility">Accessibility</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/integration/knockout" class="toolbar-quicknav-item"
+                           data-name="Integrations">Integrations</a>
+                        <a href="//docs.mobiscroll.com/3-0-0/jquery/server-controls/mvc" class="toolbar-quicknav-item"
+                           data-name="Server Controls">Server Controls</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a id="docs-versionpicker" href="#" data-toggle="dropdown" class="toolbar-dropdown-quicknav">3.0 for
+                    JQuery <span class="micons icon-ion-arrow-down-b"></span></a>
+                <div class="dropdown-menu" aria-labelledby="docs-versionpicker">
+                    <div class="docs-version-dropdown">
+                        <div class="docs-version-item" data-name="3.0" data-url="3-0-0">3.0
+                            <div class="docs-menu-stable">final</div>
+                        </div>
+                        <div class="docs-version-item" data-name="2.17.3" data-url="2-17-3">2.17.3
+                            <div class="docs-menu-stable">final</div>
+                        </div>
+                        <div class="docs-version-item" data-name="2.17.2" data-url="2-17-2">2.17.2
+                            <div class="docs-menu-stable">final</div>
+                        </div>
+                        <div class="docs-version-item" data-name="2.17.1" data-url="2-17-1">2.17.1
+                            <div class="docs-menu-stable">final</div>
+                        </div>
+                        <div class="docs-version-item" data-name="2.17" data-url="2-17-0">2.17
+                            <div class="docs-menu-stable">final</div>
+                        </div>
+                    </div>
+                    <div class="docs-framework-dropdown">
+                        <div class="docs-framework-item" data-name="javascript" style="">Javascript</div>
+                        <div class="docs-framework-item" data-name="jquery">jQuery</div>
+                        <div class="docs-framework-item" data-name="angular">Angular</div>
+                        <div class="docs-framework-item" data-name="react" style="">React</div>
+                        <div class="docs-framework-item" data-name="ember" style="">
+                            Ember
+                            <div class="docs-menu-preorder">preorder</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="searchbox">
+                <div class="searchbox-cont">
+                    <div class="micons icon-search"></div>
+                    <div class="micons icon-material-close"></div>
+                    <div class="searchbox-gc">
+                        <script type="text/javascript">
+                            (function () {
+                                var cx = '010273351098886469843:hou7lpndkza';
+                                var gcse = document.createElement('script');
+                                gcse.type = 'text/javascript';
+                                gcse.async = true;
+                                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                    '//www.google.com/cse/cse.js?cx=' + cx;
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(gcse, s);
+                            })();
+                        </script>
+                        <gcse:searchbox-only resultsurl="//docs.mobiscroll.com/search"
+                                             placeholder="Search..."></gcse:searchbox-only>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+        <div class="list-group docs-sidenav docs-sidenav-hidden" aria-multiselectable="true">
+            <a href="#docs-documentation" data-toggle="collapse" class="list-group-item docs-sidenav-parent">General</a>
+            <div id="docs-documentation" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery" class="list-group-item active">Getting Started</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/quick-install" class="list-group-item ">Quick Install</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/with-cordova" class="list-group-item ">Using with
+                    Cordova</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/instance" class="list-group-item ">Instance</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/utils" class="list-group-item ">Utility functions</a>
+
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/upgrade-guide" class="list-group-item ">Upgrade Guide</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/custom-components" class="list-group-item ">Custom
+                    Components</a>
+            </div>
+            <a href="#docs-calendar" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Calendar</a>
+            <div id="docs-calendar" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/calendar#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/calendar#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/calendar#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/calendar#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/calendar#localization"
+                   class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/calendar#integrations"
+                   class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-color" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Color</a>
+            <div id="docs-color" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/color#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/color#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/color#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/color#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/color#localization" class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/color#integrations" class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-datetime" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Date & Time</a>
+            <div id="docs-datetime" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/datetime#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/datetime#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/datetime#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/datetime#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/datetime#localization"
+                   class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/datetime#integrations"
+                   class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-eventcalendar" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Event
+                Calendar</a>
+            <div id="docs-eventcalendar" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/eventcalendar#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/eventcalendar#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/eventcalendar#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/eventcalendar#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/eventcalendar#localization" class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/eventcalendar#integrations" class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-forms" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Forms</a>
+            <div id="docs-forms" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#textfields" class="list-group-item ">Textfields</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#select" class="list-group-item ">Select</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#checkbox" class="list-group-item ">Checkbox</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#switch" class="list-group-item ">Switch</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#radio-buttons" class="list-group-item ">Radio
+                    Buttons</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#buttons" class="list-group-item ">Buttons</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#slider" class="list-group-item ">Slider</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#progress" class="list-group-item ">Progress</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#segmented" class="list-group-item ">Segmented</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#stepper" class="list-group-item ">Stepper</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#groups" class="list-group-item ">Groups</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#typography" class="list-group-item ">Typography</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#validation" class="list-group-item ">Validation</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#localization" class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/forms#integrations" class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-image" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Image</a>
+            <div id="docs-image" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/image#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/image#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/image#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/image#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/image#data-attributes" class="list-group-item">Data
+                    attributes</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/image#localization" class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/image#integrations" class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-listview" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Listview</a>
+            <div id="docs-listview" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/listview#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/listview#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/listview#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/listview#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/listview#data-attributes" class="list-group-item">Data
+                    attributes</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/listview#localization"
+                   class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/listview#integrations"
+                   class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-measurement" data-toggle="collapse"
+               class="list-group-item docs-sidenav-parent">Measurement</a>
+            <div id="docs-measurement" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/measurement#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/measurement#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/measurement#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/measurement#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/measurement#temperature"
+                   class="list-group-item">Temperature</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/measurement#speed" class="list-group-item">Speed</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/measurement#distance" class="list-group-item">Distance</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/measurement#mass" class="list-group-item">Mass</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/measurement#force" class="list-group-item">Force</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/measurement#localization" class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/measurement#integrations" class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-menustrip" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Menustrip</a>
+            <div id="docs-menustrip" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/menustrip#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/menustrip#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/menustrip#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/menustrip#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/menustrip#data-attributes" class="list-group-item">Data
+                    attributes</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/menustrip#integrations"
+                   class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-number" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Number</a>
+            <div id="docs-number" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/number#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/number#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/number#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/number#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/number#localization"
+                   class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/number#integrations"
+                   class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-numpad" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Numpad</a>
+            <div id="docs-numpad" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/numpad#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/numpad#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/numpad#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/numpad#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/numpad#decimal" class="list-group-item">Decimal</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/numpad#timespan" class="list-group-item">Timespan</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/numpad#time" class="list-group-item">Time</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/numpad#date" class="list-group-item">Date</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/numpad#integrations"
+                   class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-range" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Range</a>
+            <div id="docs-range" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/range#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/range#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/range#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/range#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/range#localization" class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/range#integrations" class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-rating" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Rating</a>
+            <div id="docs-rating" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/rating#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/rating#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/rating#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/rating#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/rating#localization"
+                   class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/rating#integrations"
+                   class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-scroller" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Scroller</a>
+            <div id="docs-scroller" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/scroller#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/scroller#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/scroller#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/scroller#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/scroller#localization"
+                   class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/scroller#conversion-functions" class="list-group-item">Conversion
+                    functions</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/scroller#integrations"
+                   class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-select" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Select</a>
+            <div id="docs-select" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/select#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/select#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/select#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/select#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/select#localization"
+                   class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/select#integrations"
+                   class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-timer" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Timer</a>
+            <div id="docs-timer" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/timer#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/timer#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/timer#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/timer#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/timer#localization" class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/timer#integrations" class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-timespan" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Timespan</a>
+            <div id="docs-timespan" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/timespan#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/timespan#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/timespan#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/timespan#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/timespan#localization"
+                   class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/timespan#integrations"
+                   class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-list" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Treelist</a>
+            <div id="docs-list" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/list#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/list#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/list#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/list#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/list#localization" class="list-group-item">Localization</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/list#integrations" class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-widget" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Widget</a>
+            <div id="docs-widget" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/widget#usage" class="list-group-item">Usage</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/widget#options" class="list-group-item">Options</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/widget#events" class="list-group-item">Events</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/widget#methods" class="list-group-item">Methods</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/widget#integrations"
+                   class="list-group-item">Integrations</a>
+            </div>
+            <a href="#docs-tools" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Tools</a>
+            <div id="docs-tools" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/icons" class="list-group-item ">Icons</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/languages" class="list-group-item ">Language Modules</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/themes" class="list-group-item ">Themes</a>
+            </div>
+            <a href="#docs-accessibility" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Accessibility</a>
+            <div id="docs-accessibility" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/accessibility#acc-section-508" class="list-group-item">Section
+                    508</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/accessibility#acc-wai-aria" class="list-group-item">WAI-ARIA
+                    Support</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/accessibility#acc-keyboard" class="list-group-item">Keyboard
+                    Support</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/accessibility#acc-rtl" class="list-group-item">RTL
+                    Support</a>
+            </div>
+            <a href="#docs-integration" data-toggle="collapse"
+               class="list-group-item docs-sidenav-parent">Integration</a>
+            <div id="docs-integration" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/integration/knockout" class="list-group-item ">Knockout
+                    JS</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/integration/angular" class="list-group-item ">Angular JS</a>
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/integration/react" class="list-group-item ">React</a>
+            </div>
+            <a href="#docs-helpers" data-toggle="collapse" class="list-group-item docs-sidenav-parent">Server
+                Controls</a>
+            <div id="docs-helpers" class="collapse docs-nav-parent in">
+                <a href="//docs.mobiscroll.com/3-0-0/jquery/server-controls/mvc" class="list-group-item ">ASP.Net
+                    MVC</a>
+            </div>
+
+        </div>
+
+
+        <p>Welcome to the Mobiscroll API Reference. You can find the most up to date information about usage and
+            customization options here.</p>
+
+        <div class="docs-info">
+            Requires jQuery >= 1.7
+        </div>
+
+        <div class="docs-info">
+            Supported Platforms - Android 4.1+ including Android Marshmallow, iOS 6+ including iOS 10, Windows Phone 10
+            and all major mobile and desktop browsers
+        </div>
+
+
+        <p>Having trouble? Ask for <a class="help-link" href="//mobiscroll.com/support#newticket"
+                                      title="Mobiscroll Support">help</a>.</p>
+
+        <br/>
+
+        <h1>Getting Started</h1>
+        <p>
+            Mobiscroll lets you easily create and customize touch friendly spinner/scroller controls.
+            <br/>
+            Thanks to its architecture, the mobiscroll core provides the scrolling functionality and it can be used not
+            just for date & time picking,
+            but for rendering scrollable lists, selects, radiobutton lists, basically everything that lets you select a
+            value.
+        </p>
+
+        <p>
+            To get started, follow these easy steps and create your first component.<br/>
+            The component is tied to either an input or a select element.
+        </p>
+        <h3>1. Download Mobiscroll</h3>
+        <p>When building your package, select the required components on the <a href="//download.mobiscroll.com">download
+            page</a>.</p>
+        <h3>2. Load the necessary scripts</h3>
+        <div class="docs-info">Requires jQuery >= 1.7</div>
+<pre><code class="language-markup">&lt;!-- Include jQuery --&gt;
+    &lt;script src="jquery-2.2.2.min.js"&gt;&lt;/script&gt;
+    &lt;!-- Include Mobiscroll --&gt;
+    &lt;script src="js/mobiscroll.custom-3.0.0.min.js"&gt;&lt;/script&gt;
+    &lt;link href="css/mobiscroll.custom-3.0.0.min.css" rel="stylesheet" type="text/css"&gt;
+</code></pre>
+        <h3>3. Add an input to your HTML markup</h3>
+<pre><code class="language-markup">&lt;input id="scroller" /&gt;
+</code></pre>
+        <h3>4a. Initialize your component (jQuery)</h3>
+        <div class="docs-code-title">Default date picker</div>
+<pre><code class="language-javascript">$(function () {
+    // create a datepicker with default settings
+    $("#scroller").mobiscroll().date();
+    });
+</code></pre>
+        <div class="docs-code-title">Default time picker</div>
+<pre><code class="language-javascript">$(function () {
+    // create a timepicker with default settings
+    $("#scroller").mobiscroll().time();
+    });
+</code></pre>
+        <div class="docs-code-title">Default datetime picker</div>
+<pre><code class="language-javascript">$(function () {
+    // create a datetimepicker with default settings
+    $("#scroller").mobiscroll().datetime();
+    });
+</code></pre>
+        <h3>4b. Initialize your component (jQuery Mobile)</h3>
+        <p>
+            One of the first things people learn in jQuery is to use the <code>$(document).ready()</code> (or <code>$(function()
+            { })</code> ) function for executing DOM-specific code as soon as the DOM is ready
+            (which often occurs long before the onload event). However, in jQuery Mobile site and apps, pages are
+            requested and injected into the same DOM as the user navigates, so the DOM ready event is not as useful, as
+            it only executes for the first page.
+            To execute code whenever a new page is loaded and created in jQuery Mobile, you can bind to the <code>pageinit</code>
+            event.
+        </p>
+        <div class="docs-code-title">Default date picker</div>
+<pre><code class="language-javascript">$(document).on('pageinit', '#testPage', function () {
+    // create a datepicker with default settings
+    $("#scroller").mobiscroll().date();
+    });
+</code></pre>
+
+        <p>For more examples check out the <a href="//demo.mobiscroll.com" title="Mobiscroll demo">demo</a> page.</p>
+
+        <h2 id="umd">Using module loaders</h2>
+        <p>
+            Mobiscroll can be loaded as a module as well. It implements the Universal Module Definition (UMD) pattern,
+            meaning that it can be used with module loaders supporting the Asynchronous Module Definition (AMD) (e.g.
+            RequireJS, Webpack, SystemJS) or
+            CommonJS (e.g. Browserify, Webpack, SystemJS) syntax.
+        </p>
+        <p>To load Mobiscroll as a module, <a href="//download.mobiscroll.com">download</a> the mobiscroll package and
+            use it as you would use any other module:</p>
+        <div class="docs-code-title">CommonJS example</div>
+<pre><code class="language-javascript">var $ = require('jquery');
+    var mobiscroll = require('path/to/mobiscroll/js/mobiscroll.custom-3.0.0.min');
+
+    $(function () {
+    $('#test').mobiscroll().date();
+    });</code></pre>
+        <div class="docs-code-title">AMD example</div>
+<pre><code class="language-javascript">require(['jquery', 'path/to/mobiscroll/js/mobiscroll.custom-3.0.0.min'], function
+    ($) {
+    $('#test').mobiscroll().date();
+    });</code></pre>
+
+        <div class="clear"></div>
+
+        <div id="modWinfa57" class="mwindow-overlay flat-style vhidden  animated  ">
+            <div class="mwindow-cont mwindow-no-header animated  " id="modWinfa57-cont"
+                 style="width:660px;height:300px;top:50%;left:50%;margin-left:-330px;margin-top:-150px;" data-width=660
+                 data-height=300>
+                <div class="mwindow-inner">
+                <span class="mwindow-close-i mwindow-hide-o">
+                    <span class="mwindow-cross mwindow-cross-l"></span>
+                    <span class="mwindow-cross mwindow-cross-r"></span>
+                    <span class="mwindow-ie7-close micons icon-close"></span>
+                </span>
+                    <div class="mwindow-inner-c">
+
+                        <div class="subsc-title">Preorder available for Ember JS</div>
+
+                        <div class="badass-dialog-txt pdg-ss-bottom">
+                            What you'll get:<br/>
+                            - Exclusive Early Beta Access<br/>
+                            - Show your interest in the product. Based on the preorders we'll set the development and
+                            shipping priorities<br/>
+                            - Get access to the full Framework until we ship <br/>
+                            - Support and Maintenance is on us until we release the Mobiscroll for Ember <br/>
+                            - We believe in delivering great products so if for any reason you are not satisfied, you'll
+                            get a full refund
+                        </div>
+
+                        <div class="bottom-button-cont txt-center">
+                            <a class="gen-btn gen-btn-filled gen-btn-primary gen-btn-md" href="//mobiscroll.com/ember"
+                               style="color: #fff;">Read More</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var preOrderEmber = null;
+            $(function () {
+                preOrderEmber = new MS.ModalWindow($('#modWinfa57'), {
+                    animationInClass: 'anim-fade-in',
+                    animationOutClass: 'anim-fade-out',
+                    overlayAnimationInClass: 'anim-fade-in',
+                    overlayAnimationOutClass: 'anim-fade-out',
+                    overlayAnimationInitClass: '',
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+            var MS = MS || {};
+            MS.docs = MS.docs || {};
+            MS.docs.page = "getting-started";
+            MS.docs.versD = "3.0.0";
+            MS.docs.framework = "JQuery";
+            MS.docs.version = '3-0-0';
+            MS.docs.frameworkLower = 'jquery';
+            MS.docs.title = 'getting-started';
+            MS.docs.displayVersion = '3.0';
+        </script>
+
+
+    </div>
+    <div id="footer" class="foot-c ">
+        <div class="container_12">
+
+            <div class="grid_3">
+                <div class="foot-link-c"><a class="foot-link" href="//mobiscroll.com/company">about us</a></div>
+                <div class="foot-link-c"><a class="foot-link" href="//mobiscroll.com/contact">get in touch</a></div>
+                <div class="foot-link-c"><a class="foot-link" href="https://blog.mobiscroll.com"
+                                            target="_blank">blog</a></div>
+                <div class="foot-link-c"><a class="foot-link" href="http://uipatterns.io" target="_blank">ui
+                    patterns</a></div>
+            </div>
+            <div class="grid_3">
+                <div class="foot-link-c"><a class="foot-link" href="http://twitter.com/mobiscroll" target="_blank">twitter</a>
+                </div>
+                <div class="foot-link-c"><a class="foot-link" href="http://www.facebook.com/mobiscroll" target="_blank">facebook</a>
+                </div>
+                <div class="foot-link-c"><a class="foot-link" href="http://plus.google.com/+MobiscrollUI"
+                                            target="_blank">google+</a></div>
+            </div>
+            <div class="grid_3">
+                <div class="foot-link-c"><a class="foot-link" href="//mobiscroll.com/ui-for-ios">ui for ios</a></div>
+            </div>
+            <div class="grid_3">
+                <div class="foot-link-c"><a class="foot-link" href="//mobiscroll.com/toc" target="_blank">terms &
+                    conditions</a></div>
+                <div class="foot-link-c"><a class="foot-link" href="//mobiscroll.com/faq" target="_blank">faq</a></div>
+                <div class="foot-link-c"><a class="foot-link" href="//mobiscroll.com/eula" target="_blank">eula</a>
+                </div>
+                <div class="foot-link-c txt-right"><a class="foot-link "
+                                                      href="https://github.com/acidb/mobiscroll/issues?state=open"
+                                                      target="_blank">report a bug</a></div>
+            </div>
+            <div class="clear"></div>
+            <div class="grid_12 txt-right">
+                <a href="https://mixpanel.com/f/partner" class="mixp-lnk"><img
+                    src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics"/></a>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+
+
+            <div class="grid_12 hr white"></div>
+            <div class="clear"></div>
+            <div class="grid_12 foot-bottom">
+    <span class="foot-text">
+        &copy;
+        <script type="text/javascript">var d = new Date;
+        document.write(d.getFullYear());</script> Acid Media LLC - VAT No. RO19333154</span>
+                <span class="spaces">&nbsp;&nbsp;&nbsp;</span>
+                <span class="foot-text">All trademarks &copy; their respective owners</span>
+                <span class="footer-logo"></span>
+            </div>
+
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+    var google_tag_params = {
+        ecomm_prodid: 'REPLACE_WITH_VALUE',
+        ecomm_pagetype: 'REPLACE_WITH_VALUE',
+        ecomm_totalvalue: 'REPLACE_WITH_VALUE',
+    };
+</script>
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1011197709;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""
+             src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1011197709/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+
+<script type="text/javascript">
+    $('iframe[name=google_conversion_frame]').width(0).height(0).css('margin-left', -300);
+</script>
+
+
+<script type="text/javascript">
+    /*var _mfq = _mfq || [];
+     (function () {
+     var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
+     mf.src = "//cdn.mouseflow.com/projects/3f7e90c6-fcc3-4fbe-886e-205cd322f86b.js";
+     document.getElementsByTagName("head")[0].appendChild(mf);
+     })();*/
+</script>
+
+
+<script>
+    window.intercomSettings = {
+        app_id: "g2fesnpx",
+    };
+</script>
+<script>
+    (function () {
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+
+        if (inIframe() == false) {
+            window.intercomSettings.widget = {
+                activator: "#IntercomDefaultWidget"
+            };
+        }
+    }());
+</script>
+<script>(function () {
+    var w = window;
+    var ic = w.Intercom;
+    if (typeof ic === "function") {
+        ic('reattach_activator');
+        ic('update', intercomSettings);
+    } else {
+        var d = document;
+        var i = function () {
+            i.c(arguments)
+        };
+        i.q = [];
+        i.c = function (args) {
+            i.q.push(args)
+        };
+        w.Intercom = i;
+        function l() {
+            var s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://widget.intercom.io/widget/g2fesnpx';
+            var x = d.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        }
+
+        if (w.attachEvent) {
+            w.attachEvent('onload', l);
+        } else {
+            w.addEventListener('load', l, false);
+        }
+    }
+})()</script>
+
+
+</body>
+
+</html>
